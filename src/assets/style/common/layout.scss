@@ -1,0 +1,12 @@
+//모바일에서만 노출됨
+.mobile-only {
+    display: none;
+    @include breakpoint(mobile) {
+        display: block;
+    }
+}
+body {
+    background: #000;
+}
+.galaxy-wrap {
+}

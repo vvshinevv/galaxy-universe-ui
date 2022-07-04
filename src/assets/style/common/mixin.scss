@@ -1,0 +1,100 @@
+@mixin ells {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+@mixin line-clamp($lines, $line-height) {
+    display: -webkit-box;
+    max-height: ($line-height * $lines);
+    overflow: hidden;
+    line-height: $line-height;
+    -webkit-line-clamp: $lines;
+    -webkit-box-orient: vertical;
+}
+
+@mixin placeholder {
+    &::-webkit-input-placeholder {
+        @content;
+    }
+    &:-ms-input-placeholder {
+        @content;
+    }
+    &::placeholder {
+        @content;
+    }
+}
+
+// posiiton
+@mixin position(
+    $position,
+    $top: null,
+    $right: null,
+    $bottom: null,
+    $left: null
+) {
+    position: $position;
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+}
+// .sample{
+// 	@include position(absolute, 10px, null, null, 30px);
+// 	@include position(relative, 10px);
+// 	@include position(absolute, $top: 10px, $left: 50%);
+// }
+
+//media queries
+// Breakpoints
+$breakpoints: (
+    mobile: 768px,
+    tablet: 1280px,
+    pc: 1280px,
+    //최소값 1280px 이상에서 pc breakpoints 적용
+);
+@mixin breakpoint($breakpoint) {
+    // Get the breakpoint value.
+    $breakpoint-value: map-get($breakpoints, $breakpoint);
+
+    @if $breakpoint == mobile {
+        @media (max-width: ($breakpoint-value - 1)) {
+            @content;
+        }
+    } @else if $breakpoint== tablet {
+        @media (min-width: #{map-get($breakpoints, mobile)}) and (max-width: #{$breakpoint-value - 1px}) {
+            @content;
+        }
+    } @else {
+        @media (min-width: #{map-get($breakpoints, tablet)}) {
+            @content;
+        }
+    }
+}
+//.sample {
+//    @include breakpoint(mobile) {
+//        background: white;
+//    }
+//    @include breakpoint(tablet) {
+//        background: black;
+//    }
+//    @include breakpoint(pc) {
+//        display:pink;
+//    }
+//}
+
+//@media (max-width: 767px) {
+//    .sample {
+//        background: white;
+//    }
+//}
+//@media (min-width: 768px) and (max-width: 1279px) {
+//    .sample {
+//        background: black;
+//    }
+//}
+//@media (min-width: 1280px) {
+//    .sample {
+//        display: pink;
+//    }
+//}

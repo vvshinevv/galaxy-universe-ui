@@ -1,0 +1,13 @@
+node_modules/
+dist/
+static/
+*.log
+yarn.lock
+
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?

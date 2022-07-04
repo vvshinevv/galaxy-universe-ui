@@ -1,0 +1,68 @@
+@import "variables";
+@import "mixin";
+
+.galaxy-header {
+    z-index: 110;
+    display: flex;
+    align-items: center;
+    max-width: $header-width;
+    height: $header-height;
+    background: #000;
+    @include breakpoint(mobile) {
+        height: $header-height-mo;
+    }
+    &-list {
+        display: flex;
+        flex: 1;
+        align-items: center;
+        @include breakpoint(mobile) {
+            display: none;
+        }
+    }
+    &-item {
+        a {
+            padding: 10px 20px;
+            color: #fff;
+            font-size: 20px;
+        }
+    }
+    .download-link {
+        color: #fff;
+        font-size: 20px;
+    }
+}
+//모바일에서만 노출되는 menu-layer
+.menu-layer {
+    &-box {
+        z-index: 100;
+        display: none;
+        flex-direction: column;
+        background: #000;
+        @include position(fixed, 0, 0, 0, 0);
+        &.on {
+            display: flex;
+        }
+    } //.menu-layer-box
+    &-list {
+        padding: 100px 32px 0;
+    } //.menu-layer-list
+    &-item {
+        margin-bottom: 40px;
+    } //.menu-layer-item
+    &-link {
+        color: #fff;
+        font-weight: 500;
+        font-size: 18px;
+    } //.menu-layer-link
+}
+
+.icon-menu {
+    display: none;
+    @include position(absolute, 10px, 18px, null, null);
+    @include breakpoint(mobile) {
+        display: block;
+    }
+}
+.icon-close {
+    @include position(absolute, 10px, 18px, null, null);
+}
