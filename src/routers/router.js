@@ -5,7 +5,7 @@ const routes = [
         path: '/',
         name: 'Home',
         component: () =>
-            import(/* webpackChunkName: 'home' */ '@/components/Home'),
+            import( /* webpackChunkName: 'region' */'@/components/region/Region'),
     },
     {
         path: '/region',

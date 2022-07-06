@@ -17,7 +17,57 @@
             <h2 class="region-character-title">콘텐츠 살펴보기</h2>
             <ul class="region-card-list">
                 <li class="region-card-item">
-                    <div class="image"></div>
+                    <button type="button" class="image" @click="showModal = true" style="background-color: yellow">
+                        <div class="on"></div>
+                        <div class="off"></div>
+                    </button>
+                </li>
+                <li class="region-card-item">
+                    <button type="button" class="image" @click="showModal2 = true">
+                        <div class="on"></div>
+                        <div class="off"></div>
+                    </button>
+                </li>
+                <li class="region-card-item">
+                    <div class="image">
+                        <div class="on"></div>
+                        <div class="off"></div>
+                    </div>
+                </li>
+                <li class="region-card-item">
+                    <div class="image">
+                        <div class="on"></div>
+                        <div class="off"></div>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <section class="region-character">
+            <h2 class="region-character-title">캐릭터</h2>
+            <ul class="region-card-list">
+                <li class="region-card-item">
+                    <button type="button" class="image" @click="showModal2 = true" style="background-color: yellow">
+                        <div class="on"></div>
+                        <div class="off"></div>
+                    </button>
+                </li>
+                <li class="region-card-item">
+                    <button type="button" class="image" @click="showModal2 = true">
+                        <div class="on"></div>
+                        <div class="off"></div>
+                    </button>
+                </li>
+                <li class="region-card-item">
+                    <div class="image">
+                        <div class="on"></div>
+                        <div class="off"></div>
+                    </div>
+                </li>
+                <li class="region-card-item">
+                    <div class="image">
+                        <div class="on"></div>
+                        <div class="off"></div>
+                    </div>
                 </li>
             </ul>
         </section>
@@ -52,12 +102,24 @@
                 </li>
             </ul>
         </section>
+        <ContentsModal :showContentsModal="showModal" :title="'아바드림 1화'" :content="'가나다라마바사'" v-model:visible="showModal"/>
+        <CharacterModal :showContentsModal="showModal2"  :title="'강숙희'" v-model:visible="showModal2"/>
     </div>
 </template>
 
 <script>
+import ContentsModal from "@/components/region3/ContentsModal";
+import CharacterModal from "@/components/region3/CharacterModal";
 export default {
-    name: "Region3"
+    name: "Region3",
+    components: {CharacterModal, ContentsModal},
+    data() {
+        return {
+            showModal: false,
+            showModal2: false,
+
+        };
+    },
 }
 </script>
 

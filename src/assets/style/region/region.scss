@@ -5,7 +5,7 @@ $content-width: 1060px;
 .region {
     &-wrap {
         color: #fff;
-    } //.waiker-wrap
+    } //.region-wrap
     &-main {
         position: relative;
         display: flex;
@@ -27,38 +27,60 @@ $content-width: 1060px;
             text-align: center;
             text-shadow: #000 6px 5px;
             @include breakpoint(tablet) {
-                bottom: -20px;
+                bottom: 20px;
                 font-size: 40px;
             }
             @include breakpoint(mobile) {
-                bottom: -12px;
+                bottom: 12px;
                 font-size: 24px;
             }
-        }
+        }//.region-main-title
         &-text {
-            max-width: 780px;
+            max-width: $content-width;
             margin: 100px auto;
             font-size: 20px;
-            line-height: 29px;
-        }
+            @include breakpoint(tablet) {
+                margin: 40px auto;
+                padding: 0 20px;
+                font-size: 16px;
+            }
+            @include breakpoint(mobile) {
+                margin: 20px auto;
+                padding: 0 20px;
+                font-size: 14px;
+            }
+        }//.region-main-text
     }
     &-content {
         &-title {
             margin: 0 0 20px;
             text-align: center;
-        }
+        }//.region-content-title
         &-image {
             max-width: $content-width;
             height: 700px;
             margin: 0 auto;
             background: rgba(255, 0, 0, 0.3);
-        }
+            @include breakpoint(mobile) {
+                max-width: none;
+                width: 100%;
+                height: 400px;
+            }
+        }//.region-content-image
         &-text {
-            max-width: 780px;
+            max-width: $content-width;
             margin: 20px auto;
             color: #fff;
             font-size: 20px;
-        }
+            @include breakpoint(tablet) {
+                padding: 0 20px;
+                font-size: 16px;
+            }
+            @include breakpoint(mobile) {
+                padding: 0 20px;
+                font-size: 14px;
+            }
+        }//.region-content-text
     }
     &-content-more {
         margin-top: 100px;
@@ -67,8 +89,14 @@ $content-width: 1060px;
             color: #fff;
             font-size: 30px;
             text-align: center;
-        }
-    }
+            @include breakpoint(tablet) {
+                font-size: 20px;
+            }
+            @include breakpoint(mobile) {
+                font-size: 18px;
+            }
+        }//.region-content-more-title
+    }//.region-content-more
 }
 .content-image {
     &-list {
@@ -77,7 +105,7 @@ $content-width: 1060px;
         justify-content: center;
         max-width: $content-width;
         margin: 0 auto;
-    }
+    }//.content-image-list
     &-item {
         width: 100%;
 
@@ -91,12 +119,16 @@ $content-width: 1060px;
             &:nth-child(even) {
                 margin-left: 10px;
             }
+            @include breakpoint(mobile) {
+               width: 100%;
+                margin: 0 0 20px !important;
+            }
         }
         .image {
             height: 340px;
             background: rgba(255, 0, 0, 0.3);
         }
-    }
+    }//.content-image-item
 }
 .region1 {
     background: url("@/assets/image/bg_region.png") no-repeat center;
@@ -112,11 +144,64 @@ $content-width: 1060px;
     background-size: cover;
 }
 
+.region-character{
+    max-width: $content-width;
+    margin: 0 auto 40px;
+    &-title{
+        margin: 0 0 20px;
+    }//.region-character-title
+}//.region-character
 .region-card {
     &-list {
         display: flex;
         max-width: $content-width;
-    }
+        margin: 0 auto;
+    }//.region-card-list
     &-item {
-    }
+        width: 25%;
+        @include breakpoint(tablet) {
+            width: 50%;
+
+        }
+        @include breakpoint(mobile) {
+            width: 100%;
+
+        }
+        .image{
+            position:relative;
+            display: block;
+            width: 100%;
+            height: 430px;
+            background: url('@/assets/image/bg_person.png') no-repeat center top;
+            background-size: cover;
+            cursor: pointer;
+            @include breakpoint(tablet) {
+                height: 360px;
+                margin: 0 0 20px !important;
+            }
+            @include breakpoint(mobile) {
+                height: 350px;
+                margin: 0 0 20px !important;
+            }
+            &::before {
+                content: '';
+                position: absolute; z-index:-1; top:0; bottom:0; left:0; right:0; background-color:#00d200;
+                -webkit-transform: scaleY(0);
+                transform: scaleY(0);
+                -webkit-transform-origin: 0%;
+                transform-origin: 0%;
+                -webkit-transition-property: transform;
+                transition-property: transform;
+                -webkit-transition-duration: 0.3s;
+                transition-duration: 0.3s;
+                -webkit-transition-timing-function: ease-out;
+                transition-timing-function: ease-out;
+            }
+
+            &:hover:before {
+                -webkit-transform: scaleY(1);
+                transform: scaleY(1);
+            }
+        }
+    }//.region-card-item
 }

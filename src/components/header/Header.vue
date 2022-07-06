@@ -1,6 +1,6 @@
 <template>
     <header class="galaxy-header">
-        <router-link to="/">
+        <router-link class="galaxy-header-logo" to="/">
             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="282.715" height="52.844" viewBox="0 0 282.715 52.844">
                 <defs>
                     <clipPath id="clip-path">
