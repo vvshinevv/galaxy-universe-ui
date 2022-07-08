@@ -13,16 +13,16 @@
     @include breakpoint(mobile) {
         height: $header-height-mo;
     }
-    &-logo{
+    &-logo {
         @include breakpoint(tablet) {
             width: 180px;
-            svg{
+            svg {
                 width: 100%;
             }
         }
         @include breakpoint(mobile) {
             width: 100px;
-            svg{
+            svg {
                 width: 100%;
             }
         }
@@ -47,21 +47,21 @@
     }
     .download-link {
         display: inline-flex;
-        justify-content: center;
         align-items: center;
-        padding: 0 10px;
+        justify-content: center;
+        height: 30px;
         margin: 0 20px;
+        padding: 0 10px;
         color: #fff;
+        font-weight: 500;
         font-size: 20px;
         background-color: #00d200;
         border-radius: 15px;
-        font-weight: 500;
-        height: 30px;
         @include breakpoint(mobile) {
-            border-radius: 10px;
             height: 20px;
             margin: 0 10px;
             font-size: 12px;
+            border-radius: 10px;
         }
     }
 }
