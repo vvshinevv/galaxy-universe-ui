@@ -12,13 +12,13 @@
     &-title {
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: flex-start;
         box-sizing: border-box;
-        height: 66px;
+        height: 80px;
+        padding: 20px 20px 0;
         color: #fff;
         font-size: 20px;
         background: #000;
-        border-bottom: 1px solid #fff;
     } //.content-modal-title
     &-box {
         position: relative;
@@ -26,26 +26,26 @@
         height: calc(100% - 66px);
         margin: 0 auto;
         margin-bottom: 100px;
-        padding: 100px 0;
         overflow-y: auto;
         @include breakpoint(tablet) {
-            padding: 66px 20px;
+            padding: 0 20px;
         }
         @include breakpoint(mobile) {
-            padding: 66px 20px;
+            padding: 0 20px;
         }
-        &::before {
-            @include position(fixed, 66px, 0, null, 0);
-            z-index: 10;
-            display: block;
-            height: 66px;
-            background: linear-gradient(0deg, hsla(0, 0%, 7%, 0) 3%, #000 90%);
-            content: "";
-        }
+        //&::before {
+        //    @include position(fixed, 66px, 0, null, 0);
+        //    z-index: 10;
+        //    display: block;
+        //    height: 66px;
+        //    background: linear-gradient(0deg, hsla(0, 0%, 7%, 0) 3%, #000 90%);
+        //    content: "";
+        //}
         .title {
-            max-width: 500px;
+            max-width: 614px;
             margin: 0 auto;
-            margin-bottom: 20px;
+            margin-bottom: 40px;
+            color: #fff;
             font-size: 30px;
             @include breakpoint(tablet) {
                 font-size: 20px;
@@ -56,9 +56,20 @@
         }
     } //.content-modal-box
     &-text {
-        max-width: 500px;
+        max-width: 614px;
         margin: 0 auto;
+        padding-bottom: 60px;
+        color: #fff;
+        color: #fff;
+        font-size: 20px;
+        line-height: 2;
         white-space: pre-line;
+        @include breakpoint(tablet) {
+            font-size: 16px;
+        }
+        @include breakpoint(mobile) {
+            font-size: 14px;
+        }
     } //.content-modal-text
 }
 
@@ -238,5 +249,20 @@
     100% {
         -webkit-transform: scale(1.15);
         transform: scale(1.15);
+    }
+}
+
+.modal-image {
+    @include breakpoint(tablet) {
+        width: 100%;
+        img {
+            width: 100%;
+        }
+    }
+    @include breakpoint(mobile) {
+        width: 100%;
+        img {
+            width: 100%;
+        }
     }
 }

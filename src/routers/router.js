@@ -8,26 +8,26 @@ const routes = [
             import( /* webpackChunkName: 'region' */'@/components/region/Region'),
     },
     {
-        path: '/region',
+        path: '/mirinae',
         name: 'Region',
         component: () =>
             import( /* webpackChunkName: 'region' */'@/components/region/Region'),
     },
     {
-        path: '/region2',
+        path: '/rainbowshadow',
         name: 'Region2',
         component: () =>
             import( /* webpackChunkName: 'region2' */'@/components/region2/Region2'),
     },
     {
-        path: '/region3',
+        path: '/avadream',
         name: 'Region3',
         component: () =>
             import(/* webpackChunkName: 'region3' */'@/components/region3/Region3'),
     },
     {
         path: '/*',
-        redirect: 'Home',
+        redirect: 'Region',
     },
 ];
 

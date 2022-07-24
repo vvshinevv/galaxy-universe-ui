@@ -1,0 +1,84 @@
+@import "../common/variables";
+@import "../common/mixin";
+.modal {
+    @include position(fixed, 0, 0, 0, 0);
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: scroll;
+    background-color: rgba(#000, 0.7);
+    scroll-behavior: smooth;
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+    touch-action: pan-y;
+    overscroll-behavior-y: none;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    &-dimmed {
+        @include position(absolute, 0, 0, 0, 0);
+        touch-action: pan-y;
+        overscroll-behavior-y: none;
+    } //.modal-dimmed
+
+    .modal-inner {
+        position: relative;
+        flex: none;
+        overflow: hidden;
+        background-color: #1e2124;
+    }
+    &-close {
+        $button-width: 40px;
+        $button-height: $button-width;
+
+        @include position(absolute, 20px, 20px, null, null);
+        width: $button-width;
+        height: $button-height;
+        background: none;
+        background: rgba(#333, 0.1);
+        border-radius: 0;
+        border-radius: 50%;
+
+        //닫기
+        $arrow-width: 22px;
+        $arrow-height: 2px;
+        &::after,
+        &::before {
+            z-index: 1;
+            width: $arrow-width;
+            height: $arrow-height;
+            background: #fff;
+            content: "";
+        } //.modal .modal-inner .modal-close::before , .modal .modal-inner .modal-close::after
+        &::after {
+            @include position(absolute, null, null, null, 50%);
+            transform: translateX(-50%) rotate(-45deg);
+        }
+        &::before {
+            @include position(absolute, null, null, null, 50%);
+            transform: translateX(-50%) rotate(45deg);
+        }
+    } //.modal-close
+
+    &.free-modal {
+        &.modal-minimize {
+            top: auto;
+            bottom: 0;
+            left: 55%;
+            width: fit-content;
+            height: fit-content;
+            transform: none;
+            .modal-dimmed {
+                display: none;
+            }
+        }
+        .minimize {
+            top: auto;
+            bottom: 0;
+            left: auto;
+            transform: none;
+        }
+    }
+}
