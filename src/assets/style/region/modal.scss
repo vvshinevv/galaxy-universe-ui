@@ -6,6 +6,7 @@
     display: none;
     background: #000;
     @include position(fixed, 0, 0, 0, 0);
+    background: #000 url("@/assets/image/bg_content_book.png") repeat center top;
     &.on {
         display: block;
     }
@@ -43,19 +44,21 @@
         //}
         .title {
             max-width: 614px;
-            margin: 0 auto;
-            margin-bottom: 40px;
+            margin: 100px auto 40px;
             color: #fff;
             font-size: 30px;
             @include breakpoint(tablet) {
-                font-size: 20px;
+                margin: 60px auto 20px;
+                font-size: 24px;
             }
             @include breakpoint(mobile) {
-                font-size: 18px;
+                margin: 30px auto 20px;
+                font-size: 20px;
             }
         }
     } //.content-modal-box
     &-text {
+        position: relative;
         max-width: 614px;
         margin: 0 auto;
         padding-bottom: 60px;
@@ -264,5 +267,15 @@
         img {
             width: 100%;
         }
+    }
+}
+
+.icon-planet{
+    position: relative;
+    width: 100%;
+    height: 240px;
+    img{
+        @include position(absolute,50%,null,null,50%);
+        transform: translate(-50%,-50%);
     }
 }
