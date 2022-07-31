@@ -39,14 +39,14 @@
     <ul class="galaxy-header-list">
       <!-- 첫페이지 진입시 on클래스를 넣어 해당 영역 활성화 되게 수정 -->
       <li class="galaxy-header-item" :class="{ on: $route.name === 'Home' }">
-        <router-link to="/mirinae">MIRINAE</router-link>
+        <router-link to="/avadream">아바드림</router-link>
       </li>
-      <li class="galaxy-header-item">
-        <router-link to="/rainbowshadow">RAINBOWSHADOW</router-link>
-      </li>
-      <li class="galaxy-header-item">
-        <router-link to="/avadream">AVADREAM</router-link>
-      </li>
+<!--      <li class="galaxy-header-item">-->
+<!--        <router-link to="/rainbowshadow">RAINBOWSHADOW</router-link>-->
+<!--      </li>-->
+<!--      <li class="galaxy-header-item">-->
+<!--        <router-link to="/avadream">AVADREAM</router-link>-->
+<!--      </li>-->
     </ul>
     <!--        <a href="/" class="download-link">APP DOWNLOAD</a>-->
     <MenuLayer />

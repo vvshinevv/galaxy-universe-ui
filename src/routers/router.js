@@ -8,7 +8,7 @@ const routes = [
             import( /* webpackChunkName: 'region' */'@/components/region/Region'),
     },
     {
-        path: '/mirinae',
+        path: '/avadream',
         name: 'Region',
         component: () =>
             import( /* webpackChunkName: 'region' */'@/components/region/Region'),

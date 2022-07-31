@@ -271,12 +271,12 @@
     }
 }
 
-.icon-planet{
+.icon-planet {
     position: relative;
     width: 100%;
     height: 240px;
-    img{
-        @include position(absolute,50%,null,null,50%);
-        transform: translate(-50%,-50%);
+    img {
+        @include position(absolute, 50%, null, null, 50%);
+        transform: translate(-50%, -50%);
     }
 }
