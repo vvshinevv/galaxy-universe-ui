@@ -54,7 +54,7 @@
         <!--                </swiper>-->
         <img
           :src="image.src"
-          v-for="(image, idx) of imgUrl"
+          v-for="(image, idx) of toonList"
           :key="'image_' + idx"
         />
       </div>
@@ -90,79 +90,15 @@ export default {
       type: Boolean,
       default: false,
     },
-    title: {
-      type: String,
-      default: "",
-    },
-    content: {
-      type: String,
-      default: "",
-    },
+      toonList: {
+          type: Array,
+          default: () => {
+              return [];
+          },
+      },
   },
   setup() {
     const state = reactive({
-      imgUrl: [
-        {
-          src: require("@/assets/image/toon1/toon_001.jpg"),
-        },
-        {
-          src: require("@/assets/image/toon1/toon_002.jpg"),
-        },
-        {
-          src: require("@/assets/image/toon1/toon_003.jpg"),
-        },
-        {
-          src: require("@/assets/image/toon1/toon_004.jpg"),
-        },
-        {
-          src: require("@/assets/image/toon1/toon_005.jpg"),
-        },
-        {
-          src: require("@/assets/image/toon1/toon_006.jpg"),
-        },
-        {
-          src: require("@/assets/image/toon1/toon_007.jpg"),
-        },
-        {
-          src: require("@/assets/image/toon1/toon_008.jpg"),
-        },
-        {
-          src: require("@/assets/image/toon1/toon_009.jpg"),
-        },
-        {
-          src: require("@/assets/image/toon1/toon_010.jpg"),
-        },
-        {
-          src: require("@/assets/image/toon1/toon_011.jpg"),
-        },
-        {
-          src: require("@/assets/image/toon1/toon_012.jpg"),
-        },
-        {
-          src: require("@/assets/image/toon1/toon_013.jpg"),
-        },
-        {
-          src: require("@/assets/image/toon1/toon_014.jpg"),
-        },
-        {
-          src: require("@/assets/image/toon1/toon_015.jpg"),
-        },
-        {
-          src: require("@/assets/image/toon1/toon_016.jpg"),
-        },
-        {
-          src: require("@/assets/image/toon1/toon_017.jpg"),
-        },
-        {
-          src: require("@/assets/image/toon1/toon_018.jpg"),
-        },
-        {
-          src: require("@/assets/image/toon1/toon_019.jpg"),
-        },
-        {
-          src: require("@/assets/image/toon1/toon_020.jpg"),
-        },
-      ],
       swiperOption: {
         slidesPerView: 1,
         spaceBetween: 60,
@@ -185,7 +121,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .content-modal .swiper-box {
   position: relative;
   box-sizing: unset;

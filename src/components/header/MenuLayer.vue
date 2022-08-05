@@ -23,28 +23,28 @@
       <ul class="menu-layer-list">
         <li class="menu-layer-item">
           <router-link
+            to="/firstlight"
+            class="menu-layer-link"
+            @click.native="showModal = false"
+            >현실의세계</router-link
+          >
+        </li>
+        <li class="menu-layer-item">
+          <router-link
+            to="/rainbowshadow"
+            class="menu-layer-link"
+            @click.native="showModal = false"
+            >상상의세계</router-link
+          >
+        </li>
+        <li class="menu-layer-item">
+          <router-link
             to="/avadream"
             class="menu-layer-link"
             @click.native="showModal = false"
-            >아바드림</router-link
+            >꿈의세계</router-link
           >
         </li>
-<!--        <li class="menu-layer-item">-->
-<!--          <router-link-->
-<!--            to="/rainbowshadow"-->
-<!--            class="menu-layer-link"-->
-<!--            @click.native="showModal = false"-->
-<!--            >레인보우쉐도우</router-link-->
-<!--          >-->
-<!--        </li>-->
-<!--        <li class="menu-layer-item">-->
-<!--          <router-link-->
-<!--            to="/avadream"-->
-<!--            class="menu-layer-link"-->
-<!--            @click.native="showModal = false"-->
-<!--            >아바드림</router-link-->
-<!--          >-->
-<!--        </li>-->
       </ul>
       <button type="button" class="icon-close" @click="showModal = false">
         <svg

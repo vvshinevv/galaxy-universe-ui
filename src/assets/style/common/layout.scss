@@ -1,8 +1,15 @@
 //모바일에서만 노출됨
 .mobile-only {
-    display: none;
+    display: none !important;
     @include breakpoint(mobile) {
-        display: block;
+        display: block !important;
+    }
+}
+//pc tablet에서만 노출됨
+.pc-only{
+    display:block;
+    @include breakpoint(mobile) {
+        display: none;
     }
 }
 body {

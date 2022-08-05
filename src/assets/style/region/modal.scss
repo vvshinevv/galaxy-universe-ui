@@ -6,7 +6,6 @@
     display: none;
     background: #000;
     @include position(fixed, 0, 0, 0, 0);
-    background: #000 url("@/assets/image/bg_content_book.png") repeat center top;
     &.on {
         display: block;
     }
@@ -24,7 +23,7 @@
     &-box {
         position: relative;
         box-sizing: border-box;
-        height: calc(100% - 66px);
+        height: calc(100% - 80px);
         margin: 0 auto;
         margin-bottom: 100px;
         overflow-y: auto;
@@ -34,14 +33,6 @@
         @include breakpoint(mobile) {
             padding: 0 20px;
         }
-        //&::before {
-        //    @include position(fixed, 66px, 0, null, 0);
-        //    z-index: 10;
-        //    display: block;
-        //    height: 66px;
-        //    background: linear-gradient(0deg, hsla(0, 0%, 7%, 0) 3%, #000 90%);
-        //    content: "";
-        //}
         .title {
             max-width: 614px;
             margin: 100px auto 40px;
@@ -106,47 +97,78 @@
 .content-character {
     &-box {
         display: flex;
-        &::after {
-            z-index: -1;
-            background: url("@/assets/image/bg_char.png") no-repeat center top;
+        height: 100%;
+        background: url("@/assets/image/region1/bg_color.png") no-repeat center;
+        background-size: cover;
+        &::before{
             content: "";
-            @include position(absolute, 66px, 0, 0, 0);
+            @include position(absolute, 0, 0, 0, 0);
+            clip-path: polygon(0 0, 20% 0, 40% 100%, 0% 100%);
+            background:#000;
+            z-index: 3;
+            @include breakpoint(mobile) {
+                clip-path: polygon(0 0, 100% 0, 100% 30%, 0 50%);
+            }
+        }
+        &::after {
+            background: url("@/assets/image/region1/bg_char.png") no-repeat center bottom;
+            content: "";
+            background-size: contain;
+            @include position(absolute, 0, 50%, 0, 0);
+            z-index: 5;
             @at-root .on.content-modal & {
                 animation: zoomin 2s linear;
                 animation-fill-mode: forwards;
                 @include breakpoint(mobile) {
                     background-size: auto 300px;
                     animation: none;
+                    right: 0;
+                    background-position: center top;
                 }
             }
         }
     }
 } //.content-character-box
+.content-character-box.v2::after{
+    background-image: url("@/assets/image/region1/bg_char2.png")
+}
+.content-character-box.v3::after{
+    background-image: url("@/assets/image/region1/bg_char3.png")
+}
 .main-character {
     position: relative;
     box-sizing: border-box;
     width: 50%;
     margin-top: 100px;
-    margin-right: 50px;
     margin-left: auto;
     padding: 30px 20px;
     overflow-y: auto;
+    z-index:10;
     @include breakpoint(mobile) {
+        text-align: center;
         width: 100%;
-        height: calc(100vh - 366px);
+        height: calc(100vh - 300px);
         margin: 0;
         margin-top: 300px;
-        background: rgba(0, 0, 0, 0.6);
+        padding-top: 0;
     }
 
     &-title {
-        padding: 30px 0;
+        padding: 30px 0 0;
         color: #fff;
         font-weight: 900;
         font-size: 42px;
+        img{
+            width: 100%
+        }
+        @include breakpoint(tablet) {
+            width: 300px;
+        }
         @include breakpoint(mobile) {
-            padding: 15px 0;
+            width: 250px;
+            padding: 0;
             font-size: 35px;
+            margin: 0 auto;
         }
     } //.main-character-title
     &-text {
@@ -162,7 +184,8 @@
     &-text2 {
         padding-bottom: 25px;
         color: #fff;
-        font-size: 24px;
+        font-size: 26px;
+        font-weight: bold;
         line-height: 34px;
         @include breakpoint(mobile) {
             font-size: 18px;
@@ -173,23 +196,33 @@
             display: flex;
             align-items: center;
             height: 45px;
-            border-bottom: 1px solid #aaa;
             @include breakpoint(mobile) {
                 height: 30px;
             }
-            &:first-child {
-                border-top: 1px solid #aaa;
-            }
         }
         .title {
+            position:relative;
             flex: none;
-            width: 150px;
+            display: flex;
+            align-items: center;
+            width: 60px;
             color: #fff;
-            font-size: 14px;
+            font-size: 18px;
+            line-height: 22px;
+            &::after{
+                content:'';
+                position:absolute;
+                width: 1px;
+                height: 30px;
+                right: 0;
+                background:#fff;
+            }
         }
         .text {
+            padding-left: 20px;
             color: #fff;
-            font-size: 14px;
+            font-size: 16px;
+            line-height: 22px;
         }
     } //.main-character-info
 }
@@ -202,7 +235,8 @@
     height: 50px;
     margin-top: 40px;
     color: #fff;
-    font-size: 14px;
+    font-size: 20px;
+    font-weight: bold;
     border: 1px solid #fff;
 
     @include breakpoint(mobile) {
@@ -215,24 +249,28 @@
     display: none;
     box-sizing: border-box;
     width: 50%;
-    margin-right: 50px;
-    padding: 200px 30px;
+    padding: 100px 60px 30px;
+    overflow-y: auto;
     font-size: 18px;
-    line-height: 1.8em;
+    line-height: 2em;
     white-space: pre-line;
     background: #000;
-    @include position(absolute, 66px, 0, 0, null);
+    z-index: 15;
+    color: #fff;
+    @include position(absolute, 0, 0, 0, null);
     @include breakpoint(mobile) {
         width: 100%;
         margin: 0;
         padding: 100px 20px;
         font-size: 14px;
     }
+    .title{
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 60px;
+    }
     &.on {
         display: block;
-    }
-    .modal-close {
-        background: rgba(#666, 0.6);
     }
 }
 @keyframes zoomin {
@@ -257,17 +295,50 @@
 }
 
 .modal-image {
-    @include breakpoint(tablet) {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    &-box{
         width: 100%;
-        img {
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        align-items: center;
+        justify-content:center;
+    }
+    .title{
+        position:absolute;
+        z-index: 10;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+    }
+    @include breakpoint(tablet) {
+        bg {
             width: 100%;
         }
     }
     @include breakpoint(mobile) {
-        width: 100%;
-        img {
+        bg {
             width: 100%;
         }
+    }
+    &-box{
+        width: 100%;
+        height: 100%;
     }
 }
 
@@ -279,4 +350,184 @@
         @include position(absolute, 50%, null, null, 50%);
         transform: translate(-50%, -50%);
     }
+}
+.content-modal-list{
+    display: none;
+    position: fixed;
+    top: 0;
+    left:0;
+    bottom: 0;
+    right: 0;
+    background: #000;
+    z-index: 100;
+    align-items:center;
+    justify-content:center;
+    flex-direction:column;
+    &.on{
+        display: block;
+    }
+    .footer{
+        margin-top: auto;
+        @include breakpoint(tablet) {
+            margin-top: 40px;
+        }
+    }
+    .content-modal-box{
+        flex-direction: column;
+        display: flex;
+    }
+}
+.content-list-title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.content-toon-list{
+    box-sizing:border-box;
+    width: 100%;
+    max-width: $content-width;
+    height: calc(100% - 350px);
+    display:flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    @include breakpoint(mobile) {
+        flex-direction:column;
+        height: auto;
+    }
+    li{
+        display: flex;
+        flex: 1;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        @include breakpoint(mobile) {
+            margin: 0 20px;
+            display: block;
+            flex: none;
+            padding-top: 160%;
+            margin-bottom: 30px;
+        }
+
+    }
+}
+.content-image{
+    &-modal{
+
+        display: none;
+        position: fixed;
+        top: 0;
+        left:0;
+        bottom: 0;
+        right: 0;
+        background:rgba(#000,0.7);
+        z-index: 100;
+        align-items:center;
+        justify-content:center;
+        &.on{
+            display: flex;
+        }
+        @include breakpoint(mobile) {
+            background: #000;
+        }
+
+        .modal-close{
+
+            @include breakpoint(mobile) {
+                position: absolute;
+                top: auto;
+                right: auto;
+                left:50%;
+                transform: translateX(-50%);
+                bottom: 40px;
+                width: 30px;
+                height: 30px;
+            }
+        }
+        &.v2{
+            @include breakpoint(mobile) {
+            background: url("@/assets/image/region2/modalWorldView/bg.png") no-repeat center;
+            }
+
+        }
+    }
+    &-box{
+        max-width: 1536px;
+        overflow-y:hidden;
+        position:relative;
+        overflow-y:hidden;
+        img{
+            max-width: 100%;
+            width: 100%;
+        }
+        p{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            transform: translateY(-101px);
+            font-size: 24px;
+            @at-root .v2#{&}{
+                color: #fff;
+            }
+            @include breakpoint(tablet) {
+                font-size: 20px;
+                transform: translateY(-60px);
+            }
+            @include breakpoint(mobile) {
+                transform: none;
+                margin-top: 40px;
+                font-size: 20px;
+                line-height: 2em;
+            }
+        }
+        .swiper-button-prev{
+            left: 30px;
+            width: 100px;
+            height: 60px;
+            color: transparent;;
+            background: url("@/assets/image/region3/modalWorldView/prev.png") no-repeat center;
+            @include breakpoint(mobile) {
+                position: fixed;
+                top: auto;
+                left: 50%;
+                margin-left: -150px;
+                bottom: 20px;
+            }
+            @at-root .v2#{&}{
+                @include breakpoint(mobile) {
+                    margin-left: -175px;
+                }
+            }
+        }
+        &.v2 .swiper-button-prev{
+            width:130px;
+            height:80px;
+            background: url("@/assets/image/region2/modalWorldView/prev.png") no-repeat center
+        }
+        .swiper-button-next{
+            right: 30px;
+            width: 100px;
+            height: 60px;
+            color: transparent;;
+            background: url("@/assets/image/region3/modalWorldView/next.png") no-repeat center;
+            @include breakpoint(mobile) {
+                position: fixed;
+                top: auto;
+                left: 50%;
+                margin-left: 48px;
+                bottom: 30px;
+            }
+            @at-root .v2#{&}{
+                @include breakpoint(mobile) {
+                    bottom: 15px;
+                }
+            }
+        }
+        &.v2 .swiper-button-next{
+            width:130px;
+            height:80px;
+            background: url("@/assets/image/region2/modalWorldView/next.png") no-repeat center
+        }
+    }
+
 }

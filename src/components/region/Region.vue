@@ -305,7 +305,7 @@
           </svg>
         </h3>
         <div class="region-intro-image"></div>
-        <div class="region-intro-link">
+        <div class="region-intro-link" @click="clickImage2">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -528,6 +528,7 @@
           </svg>
         </div>
       </div>
+      <!-- 아바드림 웹소설 -->
       <section class="region-content-more">
         <h3>
           <svg
@@ -686,11 +687,12 @@
           </svg>
         </h3>
         <ul class="content-image-list">
-          <li class="content-image-item" @click="showToon = true">
+          <li class="content-image-item" @click="showBook = true">
             <div class="image toon1"></div>
           </li>
         </ul>
       </section>
+      <!-- 아바드림 공식 영상 채널 -->
       <section class="region-content">
         <h3>
           <svg
@@ -848,8 +850,9 @@
             </g>
           </svg>
         </h3>
-        <div class="region-content-image r1" @click="clickImage"></div>
+        <div class="region-content-image r1" @click="showModal3 = true"></div>
       </section>
+      <!-- 아바드림 아바툰 -->
       <section class="region-content">
         <h3>
           <svg
@@ -1016,8 +1019,12 @@
             </g>
           </svg>
         </h3>
-        <div class="region-content-image r1_2" @click="clickImage"></div>
+        <div
+          class="region-content-image r1_2"
+          @click="showContentsModal3 = true"
+        ></div>
       </section>
+      <!-- 아바트리뷰트 -->
       <section class="region-content">
         <h3>
           <svg
@@ -1178,96 +1185,334 @@
             </g>
           </svg>
         </h3>
-        <div class="region-content-image r1_3" @click="clickImage"></div>
+        <div class="region-content-image r1_3" @click="showContentsModal7 = true"></div>
       </section>
+      <!-- 아바드림 캐릭터 -->
       <section class="region-character">
         <h3 class="region-character-title">
-            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="361.774" height="289.929" viewBox="0 0 361.774 289.929">
-                <defs>
-                    <clipPath id="clip-path111">
-                        <rect id="사각형_741" data-name="사각형 741" width="361.774" height="160.306" fill="none"/>
-                    </clipPath>
-                </defs>
-                <g id="타이틀_방송출연아바소개" transform="translate(-779.113 -9084)">
-                    <g id="그룹_1511" data-name="그룹 1511" transform="translate(779.113 9213.623)">
-                        <path id="패스_845" data-name="패스 845" d="M318.338,35.459l-16.522,61.38h-74.65L210.6,35.459h21.824l11.068,44.457H283.9l12.517-44.457Z" transform="translate(-83.581 -14.073)" fill="#fff"/>
-                        <path id="패스_846" data-name="패스 846" d="M395.1,35.459,378.064,96.84h20.442L410.57,52.383h68.557l4.789,17.625H405.79l7.353,17.1h75.469l2.67,9.734h20.535l-17.035-61.38Z" transform="translate(-150.043 -14.073)" fill="#fff"/>
-                        <path id="패스_847" data-name="패스 847" d="M17.036,35.459,0,96.84H20.442l2.671-9.734H98.528l7.353-17.1H27.717l4.789-17.625h68.558L113.219,96.84h20.535l-17.035-61.38Z" transform="translate(0 -14.073)" fill="#fff"/>
-                        <g id="그룹_1510" data-name="그룹 1510" transform="translate(0)">
-                            <g id="그룹_1509" data-name="그룹 1509" clip-path="url(#clip-path111)">
-                                <line id="선_8" data-name="선 8" x2="357.807" transform="translate(3.572 103.845)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="3"/>
-                                <line id="선_9" data-name="선 9" x2="357.807" transform="translate(3.572 159.401)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="3"/>
-                                <path id="패스_848" data-name="패스 848" d="M10.328,206.42H35.854a7.223,7.223,0,1,1,0,14.444H10.328a7.224,7.224,0,1,1,0-14.444M3.217,193.482H8.551v1.5H26.828v-1.5h5.333v11.31H3.217Zm8.251,23.15H34.623a2.991,2.991,0,1,0,0-5.981H11.468a2.991,2.991,0,1,0,0,5.981M8.551,200.561H26.829v-1.587H8.551Zm27.76-7.486h5.333v3.54H46.11v4.313H41.643v3.865H36.31Z" transform="translate(-1.168 -76.626)" fill="#fff"/>
-                                <path id="패스_849" data-name="패스 849" d="M84.41,210.513H113.4c3.327,0,5.971,2.359,5.971,5.289,0,2.97-2.644,5.33-5.971,5.33H84.41c-3.327,0-5.972-2.359-5.972-5.33,0-2.929,2.644-5.289,5.972-5.289M78.484,205.1H96.17v-2.888H101.5V205.1h17.731v4.11H78.484Zm.456-5.614c10.575,0,17.276.162,17.276-4.517v-1.22h5.333v1.22c0,4.679,6.61,4.517,17.185,4.517v4.191c-10.758,0-16.729-.082-19.874-3.744-3.145,3.662-9.162,3.744-19.919,3.744Zm6.518,17.454h26.711a1.124,1.124,0,1,0,0-2.238H85.458a1.124,1.124,0,1,0,0,2.238" transform="translate(-31.13 -76.894)" fill="#fff"/>
-                                <path id="패스_850" data-name="패스 850" d="M154.084,202.645h40.751v3.7H177.148v1.139h17.186v7.934H159.873v1.057h34.461v3.662H154.54v-7.975H189v-1.017H154.54v-3.662h17.276v-1.139H154.084Zm.456-9.6h17.23v-1.79H177.1v1.79h17.231v3.7H177.7c1.321,1.261,5.333,1.343,16.638,1.343v3.743c-12.216,0-17.413-.448-19.875-2.644-2.507,2.2-7.748,2.644-19.919,2.644v-3.743c11.3,0,15.316-.081,16.637-1.343H154.54Z" transform="translate(-61.152 -75.903)" fill="#fff"/>
-                                <path id="패스_851" data-name="패스 851" d="M235.917,193.481h14.541c3.828,0,6.973,2.767,6.973,6.225,0,3.54-3.145,6.347-6.973,6.347H235.917c-3.874,0-7.019-2.767-7.019-6.306,0-3.459,3.145-6.266,7.019-6.266m-6.29,13.874h5.333v9.277h34.46v4.231H229.627Zm7.2-5.533h12.626a2.066,2.066,0,1,0,0-4.109H236.829a2.07,2.07,0,1,0,0,4.109m21.287-1.3h5.971v-1.465h-5.971V195.23h5.971v-2.156h5.333v12.979h-5.333v-1.709h-5.971Z" transform="translate(-90.843 -76.626)" fill="#fff"/>
-                                <path id="패스_852" data-name="패스 852" d="M319.482,193.238c6.792,0,12.444,3.824,12.444,9.886v8.1c0,6.1-5.652,9.887-12.444,9.887-6.838,0-12.444-3.785-12.444-9.887v-8.1c0-6.063,5.607-9.886,12.444-9.886m-7.157,18.268c0,3.418,3.373,5.33,7.157,5.33,3.829,0,7.156-1.912,7.156-5.33V202.8c0-3.377-3.327-5.33-7.156-5.33-3.784,0-7.157,1.953-7.157,5.33Zm26.529-18.431h5.333v8.259h4.923v4.232h-4.923v15.7h-5.333Z" transform="translate(-121.855 -76.626)" fill="#fff"/>
-                                <path id="패스_853" data-name="패스 853" d="M383.137,193.482h5.333v8.137h13.675v-8.137h5.333v27.381H383.137Zm5.333,23.15h13.675V205.85H388.47Zm26.164-23.558h5.333v8.259h4.923v4.232h-4.923v15.7h-5.333Z" transform="translate(-152.057 -76.626)" fill="#fff"/>
-                                <path id="패스_854" data-name="패스 854" d="M456.365,216.818H474.1V206h5.332v10.823h17.687v4.313H456.365Zm.456-14.769c10.575,0,17.276.2,17.276-6.51v-1.79h5.332v1.79c0,6.713,6.61,6.51,17.186,6.51v4.273c-10.758,0-16.73-.326-19.875-4.8-3.145,4.476-9.161,4.8-19.919,4.8Z" transform="translate(-181.119 -76.894)" fill="#fff"/>
-                                <path id="패스_855" data-name="패스 855" d="M532.463,193.482h23.11l-5.925,27.381h-5.516l4.877-23.028H532.463Zm25.982-.407h5.242v8.3h3.237v-8.3h5.287v28.2h-5.287V205.606h-3.237v15.664h-5.242Z" transform="translate(-211.32 -76.626)" fill="#fff"/>
-                                <path id="패스_856" data-name="패스 856" d="M282.008,11.741V0l-9.871,21.614H260.395l21.614,9.871V43.226l9.871-21.613h11.742Z" transform="translate(-103.344 0)" fill="#fff"/>
-                                <path id="패스_857" data-name="패스 857" d="M279.863,35.835l9.871,21.613V35.835Z" transform="translate(-111.07 -14.222)" fill="#fff"/>
-                                <path id="패스_858" data-name="패스 858" d="M296.23,45.707l21.613-9.871H296.23Z" transform="translate(-117.566 -14.222)" fill="#fff"/>
-                            </g>
-                        </g>
-                    </g>
-                    <g id="그룹_1512" data-name="그룹 1512" transform="translate(858.708 9084)">
-                        <path id="패스_791" data-name="패스 791" d="M201.664,0,100.832,79.624,0,0,35.762,83.166l43.46,13.522-28.1,22.192,49.712-15.468,49.712,15.468-28.1-22.192L165.9,83.166Z" transform="translate(0 0)" fill="#fff"/>
-                        <path id="패스_792" data-name="패스 792" d="M201.235,27.245,180.75,47.729l31.092,43.306Z" transform="translate(-111.01 -16.733)" fill="#fff"/>
-                        <path id="패스_793" data-name="패스 793" d="M271.939,27.245,261.333,91.036l31.092-43.306Z" transform="translate(-160.501 -16.733)" fill="#fff"/>
-                        <path id="패스_794" data-name="패스 794" d="M201.664,0,100.832,79.624,0,0,35.762,83.166l43.46,13.522-28.1,22.192,49.712-15.468,49.712,15.468-28.1-22.192L165.9,83.166Z" transform="translate(0 0)" fill="#fff"/>
-                        <path id="패스_795" data-name="패스 795" d="M201.235,27.245,180.75,47.729l31.092,43.306Z" transform="translate(-111.01 -16.733)" fill="#fff"/>
-                        <path id="패스_796" data-name="패스 796" d="M271.939,27.245,261.333,91.036l31.092-43.306Z" transform="translate(-160.501 -16.733)" fill="#fff"/>
-                    </g>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            width="361.774"
+            height="289.929"
+            viewBox="0 0 361.774 289.929"
+          >
+            <defs>
+              <clipPath id="clip-path111">
+                <rect
+                  id="사각형_741"
+                  data-name="사각형 741"
+                  width="361.774"
+                  height="160.306"
+                  fill="none"
+                />
+              </clipPath>
+            </defs>
+            <g
+              id="타이틀_방송출연아바소개"
+              transform="translate(-779.113 -9084)"
+            >
+              <g
+                id="그룹_1511"
+                data-name="그룹 1511"
+                transform="translate(779.113 9213.623)"
+              >
+                <path
+                  id="패스_845"
+                  data-name="패스 845"
+                  d="M318.338,35.459l-16.522,61.38h-74.65L210.6,35.459h21.824l11.068,44.457H283.9l12.517-44.457Z"
+                  transform="translate(-83.581 -14.073)"
+                  fill="#fff"
+                />
+                <path
+                  id="패스_846"
+                  data-name="패스 846"
+                  d="M395.1,35.459,378.064,96.84h20.442L410.57,52.383h68.557l4.789,17.625H405.79l7.353,17.1h75.469l2.67,9.734h20.535l-17.035-61.38Z"
+                  transform="translate(-150.043 -14.073)"
+                  fill="#fff"
+                />
+                <path
+                  id="패스_847"
+                  data-name="패스 847"
+                  d="M17.036,35.459,0,96.84H20.442l2.671-9.734H98.528l7.353-17.1H27.717l4.789-17.625h68.558L113.219,96.84h20.535l-17.035-61.38Z"
+                  transform="translate(0 -14.073)"
+                  fill="#fff"
+                />
+                <g
+                  id="그룹_1510"
+                  data-name="그룹 1510"
+                  transform="translate(0)"
+                >
+                  <g
+                    id="그룹_1509"
+                    data-name="그룹 1509"
+                    clip-path="url(#clip-path111)"
+                  >
+                    <line
+                      id="선_8"
+                      data-name="선 8"
+                      x2="357.807"
+                      transform="translate(3.572 103.845)"
+                      fill="none"
+                      stroke="#fff"
+                      stroke-miterlimit="10"
+                      stroke-width="3"
+                    />
+                    <line
+                      id="선_9"
+                      data-name="선 9"
+                      x2="357.807"
+                      transform="translate(3.572 159.401)"
+                      fill="none"
+                      stroke="#fff"
+                      stroke-miterlimit="10"
+                      stroke-width="3"
+                    />
+                    <path
+                      id="패스_848"
+                      data-name="패스 848"
+                      d="M10.328,206.42H35.854a7.223,7.223,0,1,1,0,14.444H10.328a7.224,7.224,0,1,1,0-14.444M3.217,193.482H8.551v1.5H26.828v-1.5h5.333v11.31H3.217Zm8.251,23.15H34.623a2.991,2.991,0,1,0,0-5.981H11.468a2.991,2.991,0,1,0,0,5.981M8.551,200.561H26.829v-1.587H8.551Zm27.76-7.486h5.333v3.54H46.11v4.313H41.643v3.865H36.31Z"
+                      transform="translate(-1.168 -76.626)"
+                      fill="#fff"
+                    />
+                    <path
+                      id="패스_849"
+                      data-name="패스 849"
+                      d="M84.41,210.513H113.4c3.327,0,5.971,2.359,5.971,5.289,0,2.97-2.644,5.33-5.971,5.33H84.41c-3.327,0-5.972-2.359-5.972-5.33,0-2.929,2.644-5.289,5.972-5.289M78.484,205.1H96.17v-2.888H101.5V205.1h17.731v4.11H78.484Zm.456-5.614c10.575,0,17.276.162,17.276-4.517v-1.22h5.333v1.22c0,4.679,6.61,4.517,17.185,4.517v4.191c-10.758,0-16.729-.082-19.874-3.744-3.145,3.662-9.162,3.744-19.919,3.744Zm6.518,17.454h26.711a1.124,1.124,0,1,0,0-2.238H85.458a1.124,1.124,0,1,0,0,2.238"
+                      transform="translate(-31.13 -76.894)"
+                      fill="#fff"
+                    />
+                    <path
+                      id="패스_850"
+                      data-name="패스 850"
+                      d="M154.084,202.645h40.751v3.7H177.148v1.139h17.186v7.934H159.873v1.057h34.461v3.662H154.54v-7.975H189v-1.017H154.54v-3.662h17.276v-1.139H154.084Zm.456-9.6h17.23v-1.79H177.1v1.79h17.231v3.7H177.7c1.321,1.261,5.333,1.343,16.638,1.343v3.743c-12.216,0-17.413-.448-19.875-2.644-2.507,2.2-7.748,2.644-19.919,2.644v-3.743c11.3,0,15.316-.081,16.637-1.343H154.54Z"
+                      transform="translate(-61.152 -75.903)"
+                      fill="#fff"
+                    />
+                    <path
+                      id="패스_851"
+                      data-name="패스 851"
+                      d="M235.917,193.481h14.541c3.828,0,6.973,2.767,6.973,6.225,0,3.54-3.145,6.347-6.973,6.347H235.917c-3.874,0-7.019-2.767-7.019-6.306,0-3.459,3.145-6.266,7.019-6.266m-6.29,13.874h5.333v9.277h34.46v4.231H229.627Zm7.2-5.533h12.626a2.066,2.066,0,1,0,0-4.109H236.829a2.07,2.07,0,1,0,0,4.109m21.287-1.3h5.971v-1.465h-5.971V195.23h5.971v-2.156h5.333v12.979h-5.333v-1.709h-5.971Z"
+                      transform="translate(-90.843 -76.626)"
+                      fill="#fff"
+                    />
+                    <path
+                      id="패스_852"
+                      data-name="패스 852"
+                      d="M319.482,193.238c6.792,0,12.444,3.824,12.444,9.886v8.1c0,6.1-5.652,9.887-12.444,9.887-6.838,0-12.444-3.785-12.444-9.887v-8.1c0-6.063,5.607-9.886,12.444-9.886m-7.157,18.268c0,3.418,3.373,5.33,7.157,5.33,3.829,0,7.156-1.912,7.156-5.33V202.8c0-3.377-3.327-5.33-7.156-5.33-3.784,0-7.157,1.953-7.157,5.33Zm26.529-18.431h5.333v8.259h4.923v4.232h-4.923v15.7h-5.333Z"
+                      transform="translate(-121.855 -76.626)"
+                      fill="#fff"
+                    />
+                    <path
+                      id="패스_853"
+                      data-name="패스 853"
+                      d="M383.137,193.482h5.333v8.137h13.675v-8.137h5.333v27.381H383.137Zm5.333,23.15h13.675V205.85H388.47Zm26.164-23.558h5.333v8.259h4.923v4.232h-4.923v15.7h-5.333Z"
+                      transform="translate(-152.057 -76.626)"
+                      fill="#fff"
+                    />
+                    <path
+                      id="패스_854"
+                      data-name="패스 854"
+                      d="M456.365,216.818H474.1V206h5.332v10.823h17.687v4.313H456.365Zm.456-14.769c10.575,0,17.276.2,17.276-6.51v-1.79h5.332v1.79c0,6.713,6.61,6.51,17.186,6.51v4.273c-10.758,0-16.73-.326-19.875-4.8-3.145,4.476-9.161,4.8-19.919,4.8Z"
+                      transform="translate(-181.119 -76.894)"
+                      fill="#fff"
+                    />
+                    <path
+                      id="패스_855"
+                      data-name="패스 855"
+                      d="M532.463,193.482h23.11l-5.925,27.381h-5.516l4.877-23.028H532.463Zm25.982-.407h5.242v8.3h3.237v-8.3h5.287v28.2h-5.287V205.606h-3.237v15.664h-5.242Z"
+                      transform="translate(-211.32 -76.626)"
+                      fill="#fff"
+                    />
+                    <path
+                      id="패스_856"
+                      data-name="패스 856"
+                      d="M282.008,11.741V0l-9.871,21.614H260.395l21.614,9.871V43.226l9.871-21.613h11.742Z"
+                      transform="translate(-103.344 0)"
+                      fill="#fff"
+                    />
+                    <path
+                      id="패스_857"
+                      data-name="패스 857"
+                      d="M279.863,35.835l9.871,21.613V35.835Z"
+                      transform="translate(-111.07 -14.222)"
+                      fill="#fff"
+                    />
+                    <path
+                      id="패스_858"
+                      data-name="패스 858"
+                      d="M296.23,45.707l21.613-9.871H296.23Z"
+                      transform="translate(-117.566 -14.222)"
+                      fill="#fff"
+                    />
+                  </g>
                 </g>
-            </svg>
-
+              </g>
+              <g
+                id="그룹_1512"
+                data-name="그룹 1512"
+                transform="translate(858.708 9084)"
+              >
+                <path
+                  id="패스_791"
+                  data-name="패스 791"
+                  d="M201.664,0,100.832,79.624,0,0,35.762,83.166l43.46,13.522-28.1,22.192,49.712-15.468,49.712,15.468-28.1-22.192L165.9,83.166Z"
+                  transform="translate(0 0)"
+                  fill="#fff"
+                />
+                <path
+                  id="패스_792"
+                  data-name="패스 792"
+                  d="M201.235,27.245,180.75,47.729l31.092,43.306Z"
+                  transform="translate(-111.01 -16.733)"
+                  fill="#fff"
+                />
+                <path
+                  id="패스_793"
+                  data-name="패스 793"
+                  d="M271.939,27.245,261.333,91.036l31.092-43.306Z"
+                  transform="translate(-160.501 -16.733)"
+                  fill="#fff"
+                />
+                <path
+                  id="패스_794"
+                  data-name="패스 794"
+                  d="M201.664,0,100.832,79.624,0,0,35.762,83.166l43.46,13.522-28.1,22.192,49.712-15.468,49.712,15.468-28.1-22.192L165.9,83.166Z"
+                  transform="translate(0 0)"
+                  fill="#fff"
+                />
+                <path
+                  id="패스_795"
+                  data-name="패스 795"
+                  d="M201.235,27.245,180.75,47.729l31.092,43.306Z"
+                  transform="translate(-111.01 -16.733)"
+                  fill="#fff"
+                />
+                <path
+                  id="패스_796"
+                  data-name="패스 796"
+                  d="M271.939,27.245,261.333,91.036l31.092-43.306Z"
+                  transform="translate(-160.501 -16.733)"
+                  fill="#fff"
+                />
+              </g>
+            </g>
+          </svg>
         </h3>
         <ul class="region-card-list">
-          <li class="region-card-item" v-for="item of charList">
-            <button type="button" class="image" @click="showModal2 = true">
+          <li class="region-card-item" v-for="(item, index) of charList">
+            <button type="button" class="image" @click="characterModal(index)">
               <img :src="item.imgUrl" class="image" />
             </button>
           </li>
         </ul>
-        <footer class="footer">
-          <p class="blind">footer</p>
-        </footer>
+        <Footer />
       </section>
     </div>
   </div>
 
   <!-- 이미지 노출 -->
-  <ModalImage v-model:visible="showModal" :imgUrl="imgUrl" />
-  <!-- 웹툰 -->
-  <ContentsToonModal
-    :showContentsModal="showToon"
-    :title="'아바드림 1화'"
-    v-model:visible="showToon"
+  <ModalImage
+    v-model:visible="showModal"
+    :imgUrl="imgUrl"
+    :imgUrlTitle="imgUrlTitle"
   />
+  <!-- 아바드림호 보러가기 노출 -->
+  <ModalImage2
+    v-model:visible="showModal2"
+    :imgUrl="imgUrl2"
+    :imgUrlTitle="imgUrlTitle2"
+  />
+  <!-- 웹툰 -->
+  <!--  <ContentsToonModal-->
+  <!--    :showContentsModal="showToon"-->
+  <!--    :title="'아바드림 1화'"-->
+  <!--    v-model:visible="showToon"-->
+  <!--  />-->
+
+  <!-- 아바드림 웹소설 -->
+  <ContentsModal
+    :showContentsModal="showBook"
+    :title="'드림캐처 1화'"
+    v-model:visible="showBook"
+  />
+  <ModalMovie :showContentsModal="showModal3" v-model:visible="showModal3" />
+  <ModalImage v-model:visible="showModal4" />
+  <ContentList
+    @update:visible="showContentsModal3 = $event"
+    :showContentsModal="showContentsModal3"
+  />
+
+  <!-- 캐릭터카드 동보희 -->
+  <CharacterModal1
+    @update:visible="showContentsModal4 = $event"
+    :showContentsModal="showContentsModal4"
+  />
+  <!-- 캐릭터카드 젤리곰 -->
+  <CharacterModal2
+    @update:visible="showContentsModal5 = $event"
+    :showContentsModal="showContentsModal5"
+  />
+  <!-- 캐릭터카드 삐뚜루 -->
+  <CharacterModal3
+    @update:visible="showContentsModal6 = $event"
+    :showContentsModal="showContentsModal6"
+  />
+    <!-- 아바트리뷰트-->
+    <ContentList2 @update:visible="showContentsModal7 = $event" :showContentsModal="showContentsModal7"/>
 </template>
 
 <script>
-import ModalImage from "@/components/modal/ModalImage";
+import ModalImage from "@/components/region/ModalImage";
 import { reactive, toRefs } from "vue";
 import ContentsToonModal from "@/components/modal/ContentsToonModal";
+import Footer from "@/components/footer/Footer";
+import ContentsModal from "@/components/region/ContentsModal";
+import ModalMovie from "@/components/region/ModalMovie";
+import ContentList from "@/components/region/ContentList";
+import CharacterModal1 from "@/components/region/CharacterModal1";
+import CharacterModal2 from "@/components/region/CharacterModal2";
+import CharacterModal3 from "@/components/region/CharacterModal3";
+import ContentList2 from "@/components/region/ContentList2";
 export default {
   name: "Region",
-  components: { ContentsToonModal, ModalImage },
+  components: {
+      ContentList2,
+    CharacterModal1,
+    CharacterModal2,
+    CharacterModal3,
+    ContentList,
+    ModalMovie,
+    ContentsModal,
+    Footer,
+    ContentsToonModal,
+    ModalImage,
+  },
   setup() {
     const state = reactive({
       showModal: false,
+      showModal2: false,
+      showModal3: false,
       imgUrl: "",
+      imgUrl2: "",
+      imgUrlTitle: "",
+      imgUrlTitle2: "",
       showToon: false,
+      showBook: false,
+      showContentsModal3: false,
+      showContentsModal4: false,
+      showContentsModal5: false,
+      showContentsModal6: false,
+        showContentsModal7: false,
       charList: [
         {
           imgUrl: require("@/assets/image/region1/r_1_card.png"),
         },
         {
-          imgUrl: require("@/assets/image/region1/r_2_card.png"),
+          imgUrl: require("@/assets/image/region1/r_3_card.png"),
         },
         {
-          imgUrl: require("@/assets/image/region1/r_3_card.png"),
+          imgUrl: require("@/assets/image/region1/r_2_card.png"),
         },
         {
           imgUrl: require("@/assets/image/region1/r_soon1.png"),
@@ -1300,17 +1545,29 @@ export default {
     });
     const clickImage = () => {
       state.showModal = true;
-      state.imgUrl = require("@/assets/image/bg_r1_popup.png");
+      state.imgUrl = require("@/assets/image/region1/bg_comming.jpg");
+      state.imgUrlTitle = require("@/assets/image/region1/bg_comming_title.png");
     };
     const clickImage2 = () => {
-      state.showModal = true;
-      state.imgUrl = require("@/assets/image/bg_r1_2_popup.png");
+      state.showModal2 = true;
+      state.imgUrl2 = require("@/assets/image/region1/bg_ava.jpg");
+      state.imgUrlTitle2 = require("@/assets/image/region1/bg_ava_title.png");
     };
 
+    const characterModal = (cardNum) => {
+      if (cardNum === 0) {
+        state.showContentsModal4 = true;
+      } else if (cardNum === 1) {
+        state.showContentsModal5 = true;
+      } else if (cardNum === 2) {
+        state.showContentsModal6 = true;
+      }
+    };
     return {
       ...toRefs(state),
       clickImage,
       clickImage2,
+      characterModal,
     };
   },
 };
