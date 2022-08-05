@@ -1411,15 +1411,15 @@
     </div>
   </div>
 
-  <!-- 이미지 노출 -->
+  <!-- 이미지 노출 ComminSoon -->
   <ModalImage
     v-model:visible="showModal"
     :imgUrl="imgUrl"
     :imgUrlTitle="imgUrlTitle"
   />
   <!-- 아바드림호 보러가기 노출 -->
-  <ModalImage2
-    v-model:visible="showModal2"
+  <ModalImage
+    v-model:visible="showModal4"
     :imgUrl="imgUrl2"
     :imgUrlTitle="imgUrlTitle2"
   />
@@ -1436,8 +1436,10 @@
     :title="'드림캐처 1화'"
     v-model:visible="showBook"
   />
-  <ModalMovie :showContentsModal="showModal3" v-model:visible="showModal3" />
-  <ModalImage v-model:visible="showModal4" />
+    <!--아바드림호보기 -->
+    <ModalMovieChanel3  :showContentsModal="showModal2"
+                       v-model:visible="showModal2"/>
+    <ModalMovie :showContentsModal="showModal3" v-model:visible="showModal3" />
   <ContentList
     @update:visible="showContentsModal3 = $event"
     :showContentsModal="showContentsModal3"
@@ -1474,9 +1476,11 @@ import CharacterModal1 from "@/components/region/CharacterModal1";
 import CharacterModal2 from "@/components/region/CharacterModal2";
 import CharacterModal3 from "@/components/region/CharacterModal3";
 import ContentList2 from "@/components/region/ContentList2";
+import ModalMovieChanel3 from "@/components/region/ModalMovieChanel3";
 export default {
   name: "Region",
   components: {
+      ModalMovieChanel3,
       ContentList2,
     CharacterModal1,
     CharacterModal2,
@@ -1493,6 +1497,7 @@ export default {
       showModal: false,
       showModal2: false,
       showModal3: false,
+        showModal4: false,
       imgUrl: "",
       imgUrl2: "",
       imgUrlTitle: "",
@@ -1543,13 +1548,17 @@ export default {
         },
       ],
     });
+    //comming Soon
+      const commingSoon = () => {
+          state.showModal = true;
+          state.imgUrl = require("@/assets/image/region1/bg_comming.jpg");
+          state.imgUrlTitle = require("@/assets/image/region1/bg_comming_title.png");
+      }
     const clickImage = () => {
-      state.showModal = true;
-      state.imgUrl = require("@/assets/image/region1/bg_comming.jpg");
-      state.imgUrlTitle = require("@/assets/image/region1/bg_comming_title.png");
+        state.showModal2 = true;
     };
     const clickImage2 = () => {
-      state.showModal2 = true;
+      state.showModal4 = true;
       state.imgUrl2 = require("@/assets/image/region1/bg_ava.jpg");
       state.imgUrlTitle2 = require("@/assets/image/region1/bg_ava_title.png");
     };
