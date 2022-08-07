@@ -5,13 +5,13 @@ const routes = [
         path: '/',
         name: 'Home',
         component: () =>
-            import( /* webpackChunkName: 'region' */'@/components/region3/Region3'),
+            import( /* webpackChunkName: 'region' */'@/components/region/Region'),
     },
     {
         path: '/firstlight',
         name: 'Region3',
         component: () =>
-            import( /* webpackChunkName: 'region' */'@/components/region3/Region3'),
+            import( /* webpackChunkName: 'region3' */'@/components/region3/Region3'),
     },
     {
         path: '/rainbowshadow',
@@ -23,7 +23,7 @@ const routes = [
         path: '/avadream',
         name: 'Region',
         component: () =>
-            import(/* webpackChunkName: 'region3' */'@/components/region/Region'),
+            import(/* webpackChunkName: 'region' */'@/components/region/Region'),
     },
     {
         path: '/*',

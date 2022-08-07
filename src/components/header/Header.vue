@@ -38,13 +38,13 @@
     </router-link>
     <ul class="galaxy-header-list">
       <!-- 첫페이지 진입시 on클래스를 넣어 해당 영역 활성화 되게 수정 -->
-      <li class="galaxy-header-item" :class="{ on: $route.name === 'Home' }">
+      <li class="galaxy-header-item">
         <router-link to="/firstlight">현실의세계</router-link>
       </li>
       <li class="galaxy-header-item">
         <router-link to="/rainbowshadow">상상의세계</router-link>
       </li>
-      <li class="galaxy-header-item">
+      <li class="galaxy-header-item" :class="{ on: $route.name === 'Home' }">
          <router-link to="/avadream">꿈의세계</router-link>
       </li>
     </ul>
