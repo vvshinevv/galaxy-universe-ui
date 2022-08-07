@@ -16,10 +16,20 @@
                     </swiper-slide>
                 </swiper>
             </div>
+          <button
+              type="button"
+              class="modal-close pc-only"
+              @click="() => {
+            $emit('update:visible', !showContentsModal);
+            showContentsModal = false
+            }"
+          >
+            <span class="blind">닫기</span>
+          </button>
         </div>
         <button
             type="button"
-            class="modal-close"
+            class="modal-close mobile-only"
             @click="() => {
             $emit('update:visible', !showContentsModal);
             showContentsModal = false

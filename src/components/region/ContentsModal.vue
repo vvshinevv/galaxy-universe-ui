@@ -187,7 +187,12 @@ export default {
 </script>
 
 <style scoped>
+.content-modal-box{
+  padding:0;
+  margin-bottom:0;
+}
 .content-modal-bg {
+  padding:0 20px;
   background: #000 url("@/assets/image/region1/bg_ava_book.png") repeat center top;
     background-size: cover;
 }

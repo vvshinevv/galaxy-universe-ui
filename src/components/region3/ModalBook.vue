@@ -21,17 +21,27 @@
                     </swiper-slide>
                 </swiper>
             </div>
-        </div>
-        <button
-            type="button"
-            class="modal-close"
-            @click="() => {
+          <button
+              type="button"
+              class="modal-close pc-only"
+              @click="() => {
             $emit('update:visible', !showContentsModal);
             showContentsModal = false
             }"
-        >
+          >
             <span class="blind">닫기</span>
-        </button>
+          </button>
+        </div>
+      <button
+          type="button"
+          class="modal-close mobile-only"
+          @click="() => {
+            $emit('update:visible', !showContentsModal);
+            showContentsModal = false
+            }"
+      >
+        <span class="blind">닫기</span>
+      </button>
     </div>
 </template>
 
@@ -159,6 +169,9 @@ export default {
 </script>
 
 <style scoped>
+.content-image-modal{
+  align-items: flex-start;
+}
 img.mobile-only{
     width: 50%;
     padding: 20px 0;
@@ -166,20 +179,24 @@ img.mobile-only{
 }
 .book-text{
     text-align: center;
+    font-family: 'Noto Serif KR', serif;
 }
 .title{
     font-size: 16px;
     margin-bottom:4px;
+  font-family: 'Noto Serif KR', serif;
 }
 .title2{
     font-size: 30px;
     font-width:bold;
     margin-bottom: 14px;
+  font-family: 'Noto Serif KR', serif;
 }
 .text1,.text2{
     font-size: 14px;
     margin-bottom: 10px;
     line-height:2em;
     white-space: pre-line;
+  font-family: 'Noto Serif KR', serif;
 }
 </style>

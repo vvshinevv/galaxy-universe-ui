@@ -6,10 +6,11 @@
       <div  class="region-bg-box bg-region2">
           <div class="region-title-box">
               <p class="text">
-                  희망은 강한 힘을 가지고 있다.<br />
-                  물론 희망이 모든것을 이루는 마법을 가진 것은 아니다.<br />
-                  하지만, 당신이 간절히 희망하고 그 희망의 빛을 계속 가지고 간다면<br />
-                  당신이 원하는 것이 마치 마법처럼 이루어질 것이다.
+                희망은 강한 힘을 가지고 있다.<br />
+                물론 모든 것을 이루는 마법은 아니다.<br />
+                하지만, 간절히 희망하면<br />
+                원하는 것이 마법처럼<br />
+                이루어질 것이다.
               </p>
               <span class="writer">-Laini taylor-</span>
           </div>
@@ -28,22 +29,22 @@
 
               </div>
               <div class="region-main-p">
-                  <p>잠재되어 있는 꿈, 진실되고 간절한 진짜 내 꿈</p>
+                  <p> 나 하나로 시작되는 현실에서<br/>
+                    답답함을 느꼈다면<br/>
+                    페르소니아계는 다양한<br/>
+                    모습을 찾고, 만날 수 있습니다.</p>
                   <p>
-                      키가 작은 농구선수, 휠체어를 탄 모델,<br />
-                      80세를 훌쩍 넘긴 할아버지 댄서
+                    새로운 세계 속<br/>
+                    다양한 모습의 나<br/>
+                    노래하는 가수이자, 춤추는 댄서<br/>
+                    요리도 할 수 있으며, 운동선수도 가능한<br/>
+                    작지만 거대한 꿈 속 나의 모습<br/>
                   </p>
                   <p>
-                      모두가 불가능하다 할 때<br />
-                      빛으로 색과 계절을 만들고, 꿈으로 산과 들을 만드는 것<br />
-                      우리는 이것을 기적이자 ‘초월’이라 합니다.
+                    내면 깊은 곳에 숨겨져 있던<br/>
+                    또 다른 ‘나’를 펼쳐내는 순간<br/>
+                    놀라운 ‘나’를 만날 수 있습니다<br/>
                   </p>
-                  <p>
-                      동경하던 꿈이 이루어질 수 있는 곳<br />
-                      모든 꿈들이 모여 이야기가 펼쳐지는 곳<br />
-                      새로운 세계로의 출발
-                  </p>
-                  <p>우리는 AVA가 되어 진정한 행복을 찾아 떠납니다.</p>
               </div>
 
               <div class="icon2-star">
@@ -167,6 +168,10 @@
           </svg>
       </div>
     <Footer/>
+    <div class="icon-planet1"></div>
+    <div class="icon-planet2 pc-only"></div>
+    <div class="icon-planet3 "></div>
+    <div class="icon-planet4 pc-only"></div>
   </div>
 
     <ModalWorldView
@@ -211,4 +216,68 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped lang="scss">
+.icon-planet1{
+  position: absolute;
+  top:1130px;
+  left:50%;
+  width: 600px;
+  height: 600px;
+  margin-left: - 1260px;
+  background: url('@/assets/image/region2/ico_planet1.png');
+  background-size: cover;
+
+  @media (max-width: 767px) {
+      & {
+        position: absolute;
+        top: 960px;
+        left: 50%;
+        width: 300px;
+        height: 300px;
+        margin-left: -370px;
+      }
+  }
+}
+.icon-planet2{
+  position: absolute;
+  top:2000px;
+  left:50%;
+  width: 400px;
+  height: 400px;
+  margin-left: 750px;
+  background: url('@/assets/image/region2/ico_planet2.png');
+  background-size: cover;
+
+}
+.icon-planet3{
+  position: absolute;
+  top: 2870px;
+  left:50%;
+  width: 150px;
+  height: 150px;
+  margin-left: -1040px;
+  background: url('@/assets/image/region2/ico_planet3.png');
+  background-size: cover;
+
+  @media (max-width: 767px) {
+    & {
+      position: absolute;
+      top: 1670px;
+      left: 50%;
+      width: 150px;
+      height: 150px;
+      margin-left: 72px;
+    }
+  }
+}
+.icon-planet4{
+  position: absolute;
+  top: 3500px;
+  left:50%;
+  width: 300px;
+  height: 300px;
+  margin-left: 800px;
+  background: url('@/assets/image/region2/ico_planet4.png');
+  background-size: cover;
+}
+</style>

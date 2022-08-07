@@ -19,17 +19,17 @@
 
               </div>
               <div class="region-main-p">
-                  <p>  눈을 감아 빛이 사라지는 순간 펼쳐지는 새로운 세계<br/>
-                      상상하는대로 이루어지고 모든 것이 가능한 세상 ‘너머에’</p>
+                  <p>  눈을 감아 빛이 사라지는 순간<br class="mobile-only"/> 펼쳐지는 새로운 세계<br/>
+                      상상하는대로 이루어지고 모든 것이<br class="mobile-only"/> 가능한 세상 ‘너머에’</p>
                   <p>
-                      꿈을 통해 그토록 바라고 그리던 모습을 발견하는 순간<br/>
-                      기억의 찰나가 저장되어 있는 나만의 세계로 빠져들게 됩니다.<br/>
-                      며칠 전 꾸었던 꿈이 생생하게 현실로 이루어지는 느낌을 기억하며
+                      꿈을 통해 그토록 바라고<br class="mobile-only"/> 그리던 모습을 발견하는 순간<br/>
+                      기억의 찰나가 저장되어 있는 나만의<br class="mobile-only"/> 세계로 빠져들게 됩니다.<br/>
+                      며칠 전 꾸었던 꿈이 생생하게 현실로<br class="mobile-only"/> 이루어지는 느낌을 기억하며
                   </p>
                   <p>
                       다시 눈을 뜨는 순간 ‘지나온’<br/>
-                      이 구간을 통해 현실에서 한발 나아갈 수 있다면<br/>
-                      당신은 이미 또 다른 빛의 세계에 진입한 것입니다.
+                      이 구간을 통해 현실에서<br class="mobile-only"/> 한발 나아갈 수 있다면<br/>
+                      당신은 이미 또 다른 빛의 세계에<br class="mobile-only"/> 진입한 것입니다.
                   </p>
               </div>
 
@@ -42,7 +42,7 @@
           </div>
             <!-- 갤럭시 현실 세계관 -->
           <section class="region-content">
-              <h3>
+              <h3 style="z-index: 10;position: relative">
                   <svg xmlns="http://www.w3.org/2000/svg" width="260" height="80" viewBox="0 0 260 80">
                       <defs>
                           <clipPath id="8dzfy8zsda">

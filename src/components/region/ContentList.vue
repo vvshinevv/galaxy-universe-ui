@@ -192,7 +192,8 @@ export default {
   }
   li {
     flex: none;
-    width: 400px;
+    width: 300px;
+    height: 400px;
     margin: 0 15px;
     @media (min-width: 768px) and (max-width: 1279px) {
       width: 240px;

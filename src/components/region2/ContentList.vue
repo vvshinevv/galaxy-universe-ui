@@ -119,9 +119,28 @@ export default {
 }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 .content-list-title{
     display:flex;
     flex-direction:column;;
+}
+.content-toon-list li{
+  position: relative;
+}
+//나머지는 comming soon이여서 첫번째 탭에만 hover
+.content-toon-list li:first-child:hover::after{
+  content:'1화 보러가기';
+  cursor: pointer;
+  position: absolute;
+  top:0;
+  left:0;
+  bottom:0;
+  right:0;
+  background: rgba(#000,0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 28px;
 }
 </style>

@@ -46,23 +46,15 @@
           >
         </li>
       </ul>
-      <button type="button" class="icon-close" @click="showModal = false">
-        <svg
-          viewBox="0 0 24 24"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          data-v-05a98cf2=""
-        >
-          <path
-            d="M18 6L6 18M6 6l12 12"
-            stroke="#fff"
-            stroke-width="1.5"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          ></path>
+      <button type="button" class="icon-close" @click="showModal = false" >
+        <svg xmlns="http://www.w3.org/2000/svg" width="66" height="66" viewBox="0 0 66 66">
+          <g data-name="그룹 1817">
+            <path data-name="선 16" transform="translate(17.5 17.5)" style="stroke:#fff;stroke-width:2px;fill:none" d="M30 0 0 30"/>
+            <path data-name="선 17" transform="rotate(90 15 32.5)" style="stroke:#fff;stroke-width:2px;fill:none" d="M30 0 0 30"/>
+            <path data-name="사각형 872" style="fill:none" d="M0 0h66v66H0z"/>
+          </g>
         </svg>
+
       </button>
     </div>
   </div>
@@ -79,4 +71,13 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+.icon-close{
+  width: 40px;
+  height:40px;
+}
+.icon-close svg{
+  width: 100%;
+  height: 100%;
+}
+</style>

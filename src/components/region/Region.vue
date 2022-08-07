@@ -148,7 +148,7 @@
       </div>
       <!-- 아바드림 호 소개 -->
       <div class="region-intro">
-        <h3 class="title">
+        <h3 class="title" style="transform:translateY(300px);z-index: 10">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             xmlns:xlink="http://www.w3.org/1999/xlink"
