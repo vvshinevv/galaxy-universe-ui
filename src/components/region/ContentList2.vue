@@ -23,15 +23,22 @@
     <!-- 강원래 영상 -->
     <ModalMovieChanel2  :showContentsModal="showModal"
                        v-model:visible="showModal"/>
+    <!-- 이미지 노출 ComminSoon -->
+    <ModalImage
+        v-model:visible="showComming"
+        :imgUrl="imgUrlComming"
+        :imgUrlTitle="imgUrlTitleComming"
+    />
 </template>
 <script>
 import {reactive, toRefs} from "vue";
 import Footer from "@/components/footer/Footer";
 import ModalMovieChanel2 from "@/components/region/ModalMovieChanel2";
+import ModalImage from "@/components/region/ModalImage";
 
 export default {
     name: "ContentList2",
-    components: {ModalMovieChanel2, Footer},
+    components: {ModalImage, ModalMovieChanel2, Footer},
     props:{
         showContentsModal: {
             type: Boolean,
@@ -42,6 +49,9 @@ export default {
     setup() {
         const state = reactive({
             showContentsModal: true,
+             showComming: false,
+             imgUrlComming:'',
+             imgUrlTitleComming:'',
             titleUrl: require("@/assets/image/region1/bg_reboot_title.png"),
             imgUrl: [
                 {
@@ -50,18 +60,28 @@ export default {
                 },
                 {
                     src: require("@/assets/image/region1/bg_reboot_char.png"),
-                    key:null,
+                    key:1,
                 },
                 {
                     src: require("@/assets/image/region1/bg_reboot_char.png"),
-                    key:null,
+                    key:2,
                 },
             ],
             showModal: false,
         });
+        //comming Soon
+        const commingSoon = () => {
+          state.showComming = true;
+          state.imgUrlComming = require("@/assets/image/region1/bg_comming.jpg");
+          state.imgUrlTitleComming = require("@/assets/image/region1/bg_comming_title.png");
+        }
         const listEvent=(key)=>{
             if(key === 0){
                 state.showModal = true
+            }else if(key === 1 ){
+              commingSoon();
+            }else if(key === 2 ){
+              commingSoon();
             }
             return;
         };
@@ -73,16 +93,20 @@ export default {
 </script>
 
 <style scoped lang="scss">
+.content-modal-list{
+  background: url("@/assets/image/region1/bg_reboot_kim.png") no-repeat center;
+  background-size: cover;
+}
 .content-modal-box{
     height:100%;
 }
 .content-list-title{
-    margin: 40px 0;
+    margin: 40px auto;
 }
 .content-toon-list{
+    flex-wrap: nowrap;
     overflow-x: auto;
     overflow-y:hidden;
-    flex-wrap: nowrap;
     @media (min-width: 768px) and (max-width: 1279px){
         height: calc(100% - 450px);
     }
@@ -99,14 +123,14 @@ export default {
         }
         @media (max-width: 768px){
             width: auto;
-            padding-top: 120%;
             margin-bottom: 30px;
+            padding-top: 120%;
         }
     }
 }
 .content-modal-list .footer{
     margin-top: auto;
-    padding-bottom: 0;
     margin-bottom: 30px;
+    padding-bottom: 0;
 }
 </style>

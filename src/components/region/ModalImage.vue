@@ -8,7 +8,7 @@
   >
     <div class="modal-image-box">
         <img :src="imgUrlTitle" class="title"/>
-      <img :src="imgUrl" class="bg" />
+        <img :src="imgUrl" class="bg" />
     </div>
   </Modal>
 </template>
@@ -35,4 +35,10 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+@media (max-width: 768px){
+  .title{
+    width: 80%;
+  }
+}
+</style>

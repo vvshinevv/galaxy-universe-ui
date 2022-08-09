@@ -42,7 +42,7 @@
           </div>
             <!-- 갤럭시 현실 세계관 -->
           <section class="region-content">
-              <h3 style="z-index: 10;position: relative">
+              <h3 style="position: relative;z-index: 10">
                   <svg xmlns="http://www.w3.org/2000/svg" width="260" height="80" viewBox="0 0 260 80">
                       <defs>
                           <clipPath id="8dzfy8zsda">

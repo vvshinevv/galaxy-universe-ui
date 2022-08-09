@@ -34,9 +34,9 @@
         $button-height: $button-width;
 
         @include position(absolute, 20px, 20px, null, null);
+        z-index: 10;
         width: $button-width;
         height: $button-height;
-        z-index:10;
 
         //닫기
         $arrow-width: 35px;

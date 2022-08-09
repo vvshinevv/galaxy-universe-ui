@@ -174,29 +174,29 @@ export default {
 }
 img.mobile-only{
     width: 50%;
-    padding: 20px 0;
     margin: 0 auto;
+    padding: 20px 0;
 }
 .book-text{
-    text-align: center;
     font-family: 'Noto Serif KR', serif;
+    text-align: center;
 }
 .title{
-    font-size: 16px;
     margin-bottom:4px;
-  font-family: 'Noto Serif KR', serif;
+    font-size: 16px;
+    font-family: 'Noto Serif KR', serif;
 }
 .title2{
-    font-size: 30px;
-    font-width:bold;
     margin-bottom: 14px;
-  font-family: 'Noto Serif KR', serif;
+    font-weight:bold;
+    font-size: 30px;
+    font-family: 'Noto Serif KR', serif;
 }
 .text1,.text2{
-    font-size: 14px;
     margin-bottom: 10px;
+    font-size: 14px;
+    font-family: 'Noto Serif KR', serif;
     line-height:2em;
     white-space: pre-line;
-  font-family: 'Noto Serif KR', serif;
 }
 </style>

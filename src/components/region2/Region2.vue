@@ -19,7 +19,7 @@
                   <svg xmlns="http://www.w3.org/2000/svg" width="41.823" height="40.675" viewBox="0 0 41.823 40.675">
                       <defs>
                           <clipPath id="sinywxamqa">
-                              <path data-name="사각형 735" style="stroke:rgba(255,255,255,.1);fill:none" d="M0 0h41.823v40.675H0z"/>
+                              <path data-name="사각형 735" style="fill:none;stroke:rgba(255,255,255,.1)" d="M0 0h41.823v40.675H0z"/>
                           </clipPath>
                       </defs>
                       <g data-name="그룹 1491" style="clip-path:url(#sinywxamqa)">
@@ -51,7 +51,7 @@
                   <svg xmlns="http://www.w3.org/2000/svg" width="41.823" height="40.675" viewBox="0 0 41.823 40.675">
                       <defs>
                           <clipPath id="sinywxamqa">
-                              <path data-name="사각형 735" style="stroke:rgba(255,255,255,.1);fill:none" d="M0 0h41.823v40.675H0z"/>
+                              <path data-name="사각형 735" style="fill:none;stroke:rgba(255,255,255,.1)" d="M0 0h41.823v40.675H0z"/>
                           </clipPath>
                       </defs>
                       <g data-name="그룹 1491" style="clip-path:url(#sinywxamqa)">

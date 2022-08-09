@@ -1,7 +1,7 @@
 <template>
     <div class="content-modal" :class="{ on: showContentsModal === true }">
         <div class="movie-chanel">
-            <video controls  style="object-fit: contain;width:100%;" v-if="showContentsModal === true">
+            <video controls  style="width:100%;object-fit: contain;" v-if="showContentsModal === true">
                 <source :src="movieUrl"
                         type="video/mp4">
             </video>

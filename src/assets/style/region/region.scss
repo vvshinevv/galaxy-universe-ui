@@ -44,38 +44,38 @@ $content-width: 1668px;
                 background-size: contain;
             }
             @at-root .region2 & {
+                bottom: -360px;
                 max-width: $content-width;
                 height: 700px;
-                bottom: -360px;
-                background: url("@/assets/image/region2/bg_region2_title.png") no-repeat
-                    center;
+                background: url("@/assets/image/region2/bg_region2_title.png")
+                    no-repeat center;
                 background-size: contain;
             }
             @at-root .region3 & {
+                bottom: -350px;
                 max-width: $content-width;
                 height: 1000px;
-                bottom: -350px;
-                background: url("@/assets/image/region3/bg_region3_title.png") no-repeat
-                center;
+                background: url("@/assets/image/region3/bg_region3_title.png")
+                    no-repeat center;
                 background-size: contain;
             }
             @include breakpoint(tablet) {
-                bottom: -133px  !important;;
+                bottom: -133px !important;
                 width: 636px !important;
-                height: 396px  !important;;
+                height: 396px !important;
             }
             @include breakpoint(mobile) {
-              bottom: -30px  !important;;
-              width: 350px !important;
-              height: 240px  !important;;
+                bottom: -30px !important;
+                width: 350px !important;
+                height: 240px !important;
             }
         } //.region-main-title
         &-text {
+            position: relative;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            position: relative;
             @include breakpoint(tablet) {
                 margin: 40px auto;
                 padding: 0 20px;
@@ -86,37 +86,37 @@ $content-width: 1668px;
                 padding: 0 20px;
                 font-size: 14px;
             }
-            &.r3{
+            &.r3 {
                 //달
-                &::before{
-                    content:'';
-                    position:absolute;
-                    left:0;
-                    top:0;
-                    bottom:0;
+                &::before {
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    z-index: 1;
                     width: 340px;
                     background: url("@/assets/image/region3/bg_sun_l.png")
-                    no-repeat center;
-                    z-index: 1;
-                  @include breakpoint(mobile) {
-                   display: none;
-                  }
+                        no-repeat center;
+                    content: "";
+                    @include breakpoint(mobile) {
+                        display: none;
+                    }
                 }
                 //해
-                &::after{
-                    content:'';
-                    position:absolute;
-                    right:0;
-                    top:0;
-                    bottom:0;
+                &::after {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
                     width: 240px;
                     height: 800px;
                     background: url("@/assets/image/region3/bg_sun_r.png")
-                    no-repeat center;
-                  background-size: cover;
-                  @include breakpoint(mobile) {
-                    top: 280px;
-                  }
+                        no-repeat center;
+                    background-size: cover;
+                    content: "";
+                    @include breakpoint(mobile) {
+                        top: 280px;
+                    }
                 }
             }
         } //.region-main-text
@@ -129,9 +129,9 @@ $content-width: 1668px;
             margin: 0 auto;
             margin-bottom: 20px;
             font-size: 24px;
+            font-family: "Noto Serif KR", serif;
             line-height: 2em;
             text-align: center;
-            font-family: 'Noto Serif KR', serif;
             & + p {
                 margin: 50px auto;
             }
@@ -158,8 +158,8 @@ $content-width: 1668px;
         .text {
             padding: 0 20px;
             font-size: 35px;
+            font-family: "Noto Serif KR", serif;
             line-height: 2em;
-            font-family: 'Noto Serif KR', serif;
             @include breakpoint(tablet) {
                 font-size: 28px;
             }
@@ -172,7 +172,7 @@ $content-width: 1668px;
             margin-top: 50px;
             color: #fff;
             font-size: 28px;
-            font-family: 'Noto Serif KR', serif;
+            font-family: "Noto Serif KR", serif;
             @include breakpoint(tablet) {
                 margin-top: 40px;
                 font-size: 22px;
@@ -185,9 +185,9 @@ $content-width: 1668px;
     } //.region-title-box
     &-main-video {
         margin-bottom: 100px;
-      @include breakpoint(mobile) {
-        margin-bottom: 0;
-      }
+        @include breakpoint(mobile) {
+            margin-bottom: 0;
+        }
         .region-video {
             position: relative;
             max-width: 1100px;
@@ -218,12 +218,12 @@ $content-width: 1668px;
             margin-bottom: 60px;
         }
         h3 {
-            margin-bottom: 60px;
             width: 200px;
-          svg {
-            width: 100%;
-            height: 100%;
-          }
+            margin-bottom: 60px;
+            svg {
+                width: 100%;
+                height: 100%;
+            }
             @include breakpoint(mobile) {
                 width: 120px;
                 height: 58px;
@@ -252,16 +252,15 @@ $content-width: 1668px;
             }
         } //.region-intro-image
         &-link {
-          width: 200px;
-          height: 124px;
-          svg {
-            width: 100%;
-            height: 100%;
-          }
+            width: 200px;
+            height: 124px;
+            svg {
+                width: 100%;
+                height: 100%;
+            }
             @include breakpoint(mobile) {
-              width: 140px;
+                width: 140px;
                 transform: translateY(-200px);
-
             }
         } //.region-intro-link
     } //.region-intro
@@ -275,18 +274,17 @@ $content-width: 1668px;
         h3 {
             display: flex;
             justify-content: center;
+            width: 200px;
             margin: 0 auto 40px;
-          width: 200px;
-          svg {
-            width: 100%;
-            height: 100%;
-          }
+            svg {
+                width: 100%;
+                height: 100%;
+            }
             @include breakpoint(mobile) {
                 width: 130px;
                 height: 58px;
                 margin-bottom: 20px;
                 font-size: 18px;
-
             }
         }
         &-image {
@@ -323,14 +321,16 @@ $content-width: 1668px;
                 }
             }
             &.r2 {
-                background: url("@/assets/image/region2/bg_r2.png") no-repeat center;
+                background: url("@/assets/image/region2/bg_r2.png") no-repeat
+                    center;
                 //&:hover {
                 //    background: url("@/assets/image/bg_r1_over.png") no-repeat
                 //    center;
                 //}
             }
             &.r3 {
-                background: url("@/assets/image/region3/bg_r3.png") no-repeat center;
+                background: url("@/assets/image/region3/bg_r3.png") no-repeat
+                    center;
 
                 //&:hover {
                 //    background: url("@/assets/image/bg_r1_2_over.png") no-repeat
@@ -338,7 +338,8 @@ $content-width: 1668px;
                 //}
             }
             &.r3_2 {
-                background: url("@/assets/image/region3/bg_r3_2.png") no-repeat center;
+                background: url("@/assets/image/region3/bg_r3_2.png") no-repeat
+                    center;
 
                 //&:hover {
                 //    background: url("@/assets/image/bg_r1_2_over.png") no-repeat
@@ -358,10 +359,10 @@ $content-width: 1668px;
             display: flex;
             justify-content: center;
             width: 200px;
-          svg {
-            width: 100%;
-            height: 100%;
-          }
+            svg {
+                width: 100%;
+                height: 100%;
+            }
             margin: 0 auto 40px;
             @include breakpoint(mobile) {
                 width: 130px;
@@ -431,12 +432,12 @@ $content-width: 1668px;
             }
             //레인보우
             &.toon2 {
-                background: url("@/assets/image/region2/rainbow_book.png") no-repeat
-                center;
+                background: url("@/assets/image/region2/rainbow_book.png")
+                    no-repeat center;
                 background-size: contain;
                 &:hover {
                     background: url("@/assets/image/region2/rainbow_book.png")
-                    no-repeat center;
+                        no-repeat center;
                     background-size: contain;
                 }
                 @include breakpoint(mobile) {
@@ -445,13 +446,13 @@ $content-width: 1668px;
                 }
             }
             //퍼스트라이트
-            &.toon3{
-                background: url("@/assets/image/region3/first_book.png") no-repeat
-                center;
+            &.toon3 {
+                background: url("@/assets/image/region3/first_book.png")
+                    no-repeat center;
                 background-size: contain;
                 &:hover {
                     background: url("@/assets/image/region3/first_book.png")
-                    no-repeat center;
+                        no-repeat center;
                     background-size: contain;
                 }
                 @include breakpoint(mobile) {
@@ -499,19 +500,18 @@ $content-width: 1668px;
     &-title {
         display: flex;
         justify-content: center;
+        width: 220px;
         margin: 0 auto;
         transform: translateY(10px);
-      width: 220px;
-      svg {
-        width: 100%;
-        height: 100%;
-      }
+        svg {
+            width: 100%;
+            height: 100%;
+        }
         @include breakpoint(mobile) {
             width: 130px;
             height: 104px;
             font-size: 18px;
             transform: translateY(-60px);
-
         }
     } //.region-character-title
 } //.region-character
@@ -579,20 +579,20 @@ $content-width: 1668px;
 }
 
 .icon-star {
+    z-index: 10;
     display: flex;
     justify-content: center;
     margin: 100px auto 60px;
-  z-index: 10;
     @include breakpoint(mobile) {
         width: 24px;
         margin: 60px auto 30px;
     }
 }
 .icon2-star {
+    z-index: 10;
     display: flex;
     justify-content: center;
     margin: 60px auto 100px;
-  z-index: 10;
     @include breakpoint(mobile) {
         width: 24px;
         margin: 30px auto 60px;
@@ -636,37 +636,37 @@ $content-width: 1668px;
     }
 }
 
-.icon-bar{
+.icon-bar {
+    position: relative;
     display: flex;
     justify-content: center;
-    position: relative;
-    svg{
-        z-index:10;
+    svg {
+        z-index: 10;
     }
-    &::before{
+    &::before {
         position: absolute;
         top: 50%;
-        transform:translateY(-50%);
-        content:'';
-        left:0;
-        right:0;
+        right: 0;
+        left: 0;
         max-width: $content-width;
-        margin: 0 auto;
         height: 1px;
+        margin: 0 auto;
         background: #fff;
-      @include breakpoint(tablet) {
-        left: 30px;
-        right: 30px;
-      }
-      @include breakpoint(mobile) {
-        left: 30px;
-        right: 30px;
-      }
+        transform: translateY(-50%);
+        content: "";
+        @include breakpoint(tablet) {
+            right: 30px;
+            left: 30px;
+        }
+        @include breakpoint(mobile) {
+            right: 30px;
+            left: 30px;
+        }
     }
 }
-.movie{
+.movie {
     background: url("@/assets/image/region1/bg_character.png") no-repeat center;
-    background-size:cover;
+    background-size: cover;
 }
 .region1-card {
     &-list {

@@ -6,8 +6,8 @@
     }
 }
 //pc tablet에서만 노출됨
-.pc-only{
-    display:block;
+.pc-only {
+    display: block;
     @include breakpoint(mobile) {
         display: none;
     }
@@ -15,7 +15,7 @@
 body {
     background: #000;
 }
-.region-wrap{
-  overflow-x: hidden;
-  position: relative;
+.region-wrap {
+    position: relative;
+    overflow-x: hidden;
 }

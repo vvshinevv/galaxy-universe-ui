@@ -19,10 +19,10 @@
         color: #fff;
         font-size: 20px;
         background: #000;
-      @include breakpoint(mobile) {
-        height: 60px;
-        padding: 10px 20px 0;
-      }
+        @include breakpoint(mobile) {
+            height: 60px;
+            padding: 10px 20px 0;
+        }
     } //.content-modal-title
     &-box {
         position: relative;
@@ -35,13 +35,13 @@
             padding: 0 20px;
         }
         @include breakpoint(mobile) {
+            height: calc(100% - 60px);
             padding: 0 20px;
-          height: calc(100% - 60px);
         }
         .title {
             max-width: 614px;
-          padding: 100px 0 40px;
-            magin: 0 auto;
+            margin: 0 auto;
+            padding: 100px 0 40px;
             color: #fff;
             font-size: 30px;
             @include breakpoint(tablet) {
@@ -49,7 +49,7 @@
                 font-size: 24px;
             }
             @include breakpoint(mobile) {
-              padding: 20px 0 10px;
+                padding: 20px 0 10px;
                 font-size: 20px;
             }
         }
@@ -78,10 +78,17 @@
     @include position(absolute, 20px, 20px, null, null);
     width: 35px;
     height: 35px;
-  @include breakpoint(mobile) {
-    top:15px !important;
-    right: 15px !important;
-  }
+    @include breakpoint(mobile) {
+        top: 15px !important;
+        right: 15px !important;
+        .modal-image & {
+            top: auto !important;
+            right: auto !important;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
     &::before,
     &::after {
         z-index: 1;
@@ -110,57 +117,58 @@
         height: 100%;
         background: url("@/assets/image/region1/bg_color.png") no-repeat center;
         background-size: cover;
-        &::before{
-            content: "";
-            @include position(absolute, 0, 0, 0, 0);
-            clip-path: polygon(0 0, 20% 0, 40% 100%, 0% 100%);
-            background:#000;
+        &::before {
             z-index: 3;
+            background: #000;
+            content: "";
+            clip-path: polygon(0 0, 20% 0, 40% 100%, 0% 100%);
+            @include position(absolute, 0, 0, 0, 0);
             @include breakpoint(mobile) {
                 clip-path: polygon(0 0, 100% 0, 100% 30%, 0 50%);
             }
         }
         &::after {
-            background: url("@/assets/image/region1/bg_char.png") no-repeat center bottom;
-            content: "";
-            background-size: contain;
-            @include position(absolute, 0, 50%, 0, 0);
             z-index: 5;
+            background: url("@/assets/image/region1/bg_char.png") no-repeat
+                center bottom;
+            background-size: contain;
+            content: "";
+            @include position(absolute, 0, 50%, 0, 0);
             @at-root .on.content-modal & {
                 animation: zoomin 2s linear;
                 animation-fill-mode: forwards;
                 @include breakpoint(mobile) {
-                    background-size: auto 300px;
-                    animation: none;
                     right: 0;
                     background-position: center top;
+                    background-size: auto 300px;
+                    animation: none;
                 }
             }
         }
     }
 } //.content-character-box
-.content-character-box.v2::after{
-    background-image: url("@/assets/image/region1/bg_char2.png")
+.content-character-box.v2::after {
+    background-image: url("@/assets/image/region1/bg_char2.png");
 }
-.content-character-box.v3::after{
-    background-image: url("@/assets/image/region1/bg_char3.png")
+.content-character-box.v3::after {
+    background-image: url("@/assets/image/region1/bg_char3.png");
 }
 .main-character {
     position: relative;
+    z-index: 10;
     box-sizing: border-box;
     width: 50%;
     margin-top: 100px;
     margin-left: auto;
     padding: 30px 20px;
     overflow-y: auto;
-    z-index:10;
     @include breakpoint(mobile) {
-        text-align: center;
         width: 100%;
         height: calc(100vh - 300px);
         margin: 0;
         margin-top: 300px;
         padding: 0 40px 10px;
+        text-align: center;
     }
 
     &-title {
@@ -169,17 +177,17 @@
         color: #fff;
         font-weight: 900;
         font-size: 42px;
-        img{
-            width: 100%
+        img {
+            width: 100%;
         }
         @include breakpoint(tablet) {
             width: 300px;
         }
         @include breakpoint(mobile) {
             width: 250px;
+            margin: 0 auto;
             padding: 0;
             font-size: 35px;
-            margin: 0 auto;
         }
     } //.main-character-title
     &-text {
@@ -195,8 +203,8 @@
     &-text2 {
         padding-bottom: 25px;
         color: #fff;
-        font-size: 26px;
         font-weight: bold;
+        font-size: 26px;
         line-height: 34px;
         @include breakpoint(mobile) {
             font-size: 18px;
@@ -212,21 +220,21 @@
             }
         }
         .title {
-            position:relative;
-            flex: none;
+            position: relative;
             display: flex;
+            flex: none;
             align-items: center;
             width: 60px;
             color: #fff;
             font-size: 18px;
             line-height: 22px;
-            &::after{
-                content:'';
-                position:absolute;
+            &::after {
+                position: absolute;
+                right: 0;
                 width: 1px;
                 height: 30px;
-                right: 0;
-                background:#fff;
+                background: #fff;
+                content: "";
             }
         }
         .text {
@@ -246,8 +254,8 @@
     height: 50px;
     margin-top: 40px;
     color: #fff;
-    font-size: 20px;
     font-weight: bold;
+    font-size: 20px;
     border: 1px solid #fff;
 
     @include breakpoint(mobile) {
@@ -257,17 +265,17 @@
 }
 
 .related-layer {
+    z-index: 15;
     display: none;
     box-sizing: border-box;
     width: 50%;
     padding: 100px 80px 30px 50px;
     overflow-y: auto;
+    color: #fff;
     font-size: 18px;
     line-height: 2em;
     white-space: pre-line;
     background: #000;
-    z-index: 15;
-    color: #fff;
     @include position(absolute, 0, 0, 0, null);
     @include breakpoint(mobile) {
         width: 100%;
@@ -275,10 +283,10 @@
         padding: 100px 20px;
         font-size: 14px;
     }
-    .title{
-        font-size: 24px;
-        font-weight: bold;
+    .title {
         margin-bottom: 60px;
+        font-weight: bold;
+        font-size: 24px;
     }
     &.on {
         display: block;
@@ -306,35 +314,35 @@
 }
 
 .modal-image {
-    width: 100%;
-    height: 100%;
     position: absolute;
     top: 0;
-    left: 0;
     right: 0;
     bottom: 0;
+    left: 0;
     display: flex;
     align-items: center;
-    justify-content:center;
-    &-box{
-        width: 100%;
-        height: 100%;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    &-box {
         position: absolute;
         top: 0;
-        left: 0;
         right: 0;
         bottom: 0;
+        left: 0;
         display: flex;
         align-items: center;
-        justify-content:center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
     }
-    .title{
-        position:absolute;
-        z-index: 10;
+    .title {
+        position: absolute;
         top: 0;
-        left: 0;
         right: 0;
         bottom: 0;
+        left: 0;
+        z-index: 10;
         margin: auto;
     }
     @include breakpoint(tablet) {
@@ -347,7 +355,7 @@
             width: 100%;
         }
     }
-    &-box{
+    &-box {
         width: 100%;
         height: 100%;
     }
@@ -362,133 +370,130 @@
         transform: translate(-50%, -50%);
     }
 }
-.content-modal-list{
-    display: none;
+.content-modal-list {
     position: fixed;
     top: 0;
-    left:0;
-    bottom: 0;
     right: 0;
-    background: #000;
+    bottom: 0;
+    left: 0;
     z-index: 100;
-    align-items:center;
-    justify-content:center;
-    flex-direction:column;
-    &.on{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #000;
+    &.on {
         display: block;
     }
-    .footer{
+    .footer {
         margin-top: auto;
         @include breakpoint(tablet) {
             margin-top: 40px;
         }
     }
-    .content-modal-box{
-        flex-direction: column;
+    .content-modal-box {
         display: flex;
+        flex-direction: column;
     }
 }
-.content-list-title{
+.content-list-title {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 200px;
-  margin: 0 auto;
-  margin-bottom: 14px;
-  img{
-    width: 100%;
-    height: 100%;
-  }
-  @include breakpoint(mobile) {
-    width: 140px;
-  }
+    margin: 0 auto;
+    margin-bottom: 14px;
+    img {
+        width: 100%;
+        height: 100%;
+    }
+    @include breakpoint(mobile) {
+        width: 140px;
+    }
 }
-.content-toon-list{
-    box-sizing:border-box;
+.content-toon-list {
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
     width: 100%;
     max-width: $content-width;
     height: calc(100% - 350px);
-    display:flex;
-    justify-content: space-between;
     margin: 0 auto;
     @include breakpoint(mobile) {
-        flex-direction:column;
+        flex-direction: column;
         height: auto;
     }
-    li{
+    li {
         display: flex;
         flex: 1;
-      margin: 0 20px;
-        background-position: center;
+        margin: 0 20px;
         background-repeat: no-repeat;
+        background-position: center;
         background-size: cover;
         @include breakpoint(mobile) {
-            margin: 0 20px;
             display: block;
             flex: none;
-            padding-top: 160%;
+            margin: 0 20px;
             margin-bottom: 30px;
+            padding-top: 160%;
         }
-
     }
 }
-.content-image{
-    &-modal{
-
-        display: none;
+.content-image {
+    &-modal {
         position: fixed;
         top: 0;
-        left:0;
-        bottom: 0;
         right: 0;
-        background:rgba(#000,0.7);
+        bottom: 0;
+        left: 0;
         z-index: 100;
-        align-items:center;
-        justify-content:center;
-        &.on{
+        display: none;
+        align-items: center;
+        justify-content: center;
+        background: rgba(#000, 0.7);
+        &.on {
             display: flex;
         }
         @include breakpoint(mobile) {
             background: #000;
         }
 
-        .modal-close{
-
+        .modal-close {
             @include breakpoint(mobile) {
                 position: absolute;
                 top: auto;
                 right: auto;
-                left:50%;
-                transform: translateX(-50%);
                 bottom: 40px;
+                left: 50%;
                 width: 30px;
                 height: 30px;
+                transform: translateX(-50%);
             }
         }
-        &.v2{
+        &.v2 {
             @include breakpoint(mobile) {
-            background: url("@/assets/image/region2/modalWorldView/bg.png") no-repeat center;
+                background: url("@/assets/image/region2/modalWorldView/bg.png")
+                    no-repeat center;
             }
-
         }
     }
-    &-box{
+    &-box {
+        position: relative;
         max-width: 1536px;
-        overflow-y:hidden;
-        position:relative;
-        overflow-y:hidden;
-        img{
-            max-width: 100%;
+        overflow-y: hidden;
+        overflow-y: hidden;
+        img {
             width: 100%;
+            max-width: 100%;
         }
-        p{
+        p {
             display: flex;
-            justify-content: center;
             align-items: center;
+            justify-content: center;
+            font-size: 24px;
             text-align: center;
             transform: translateY(-101px);
-            font-size: 24px;
-            @at-root .v2#{&}{
+            @at-root .v2#{&} {
                 color: #fff;
             }
             @include breakpoint(tablet) {
@@ -496,60 +501,63 @@
                 transform: translateY(-60px);
             }
             @include breakpoint(mobile) {
-                transform: none;
                 margin-top: 40px;
                 font-size: 20px;
                 line-height: 2em;
+                transform: none;
             }
         }
-        .swiper-button-prev{
+        .swiper-button-prev {
             left: 30px;
             width: 100px;
             height: 60px;
-            color: transparent;;
-            background: url("@/assets/image/region3/modalWorldView/prev.png") no-repeat center;
+            color: transparent;
+            background: url("@/assets/image/region3/modalWorldView/prev.png")
+                no-repeat center;
             @include breakpoint(mobile) {
                 position: fixed;
                 top: auto;
+                bottom: 20px;
                 left: 50%;
                 margin-left: -150px;
-                bottom: 20px;
             }
-            @at-root .v2#{&}{
+            @at-root .v2#{&} {
                 @include breakpoint(mobile) {
                     margin-left: -175px;
                 }
             }
         }
-        &.v2 .swiper-button-prev{
-            width:130px;
-            height:80px;
-            background: url("@/assets/image/region2/modalWorldView/prev.png") no-repeat center
+        &.v2 .swiper-button-prev {
+            width: 130px;
+            height: 80px;
+            background: url("@/assets/image/region2/modalWorldView/prev.png")
+                no-repeat center;
         }
-        .swiper-button-next{
+        .swiper-button-next {
             right: 30px;
             width: 100px;
             height: 60px;
-            color: transparent;;
-            background: url("@/assets/image/region3/modalWorldView/next.png") no-repeat center;
+            color: transparent;
+            background: url("@/assets/image/region3/modalWorldView/next.png")
+                no-repeat center;
             @include breakpoint(mobile) {
                 position: fixed;
                 top: auto;
+                bottom: 30px;
                 left: 50%;
                 margin-left: 48px;
-                bottom: 30px;
             }
-            @at-root .v2#{&}{
+            @at-root .v2#{&} {
                 @include breakpoint(mobile) {
                     bottom: 15px;
                 }
             }
         }
-        &.v2 .swiper-button-next{
-            width:130px;
-            height:80px;
-            background: url("@/assets/image/region2/modalWorldView/next.png") no-repeat center
+        &.v2 .swiper-button-next {
+            width: 130px;
+            height: 80px;
+            background: url("@/assets/image/region2/modalWorldView/next.png")
+                no-repeat center;
         }
     }
-
 }

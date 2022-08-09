@@ -102,8 +102,8 @@ export default {
 
 <style scoped lang="scss">
 .title{
-    width: 200px;
     display: block;
+    width: 200px;
     margin: 0 auto;
     margin-top: 60px;
 }

@@ -1,6 +1,6 @@
 <template>
   <div class="content-modal" :class="{ on: showContentsModal === true }">
-    <h2 class="content-modal-title">{{ title }}</h2>
+    <h2 class="content-modal-title"></h2>
     <div class="content-modal-box">
       <div class="content-modal-bg">
         <h3 class="title">{{ title }}</h3>
@@ -188,8 +188,8 @@ export default {
 
 <style scoped>
 .content-modal-box{
-  padding:0;
   margin-bottom:0;
+  padding:0;
 }
 .content-modal-bg {
   padding:0 20px;

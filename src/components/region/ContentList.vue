@@ -180,9 +180,9 @@ export default {
   margin-bottom: 40px;
 }
 .content-toon-list {
+  flex-wrap: nowrap;
   overflow-x: auto;
   overflow-y: hidden;
-  flex-wrap: nowrap;
   @media (min-width: 768px) and (max-width: 1279px) {
     height: 340px;
   }
@@ -201,14 +201,14 @@ export default {
     }
     @media (max-width: 768px) {
       width: auto;
-      padding-top: 120%;
       margin-bottom: 30px;
+      padding-top: 120%;
     }
   }
 }
 .content-modal-list .footer {
   margin-top: auto;
-  padding-bottom: 0;
   margin-bottom: 30px;
+  padding-bottom: 0;
 }
 </style>
