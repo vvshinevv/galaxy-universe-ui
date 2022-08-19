@@ -1418,7 +1418,7 @@
     :imgUrlTitle="imgUrlTitle"
   />
   <!-- 아바드림호 보러가기 노출 -->
-  <ModalImage
+  <ModalAvaDream
     v-model:visible="showModal4"
     :imgUrl="imgUrl2"
     :imgUrlTitle="imgUrlTitle2"
@@ -1477,9 +1477,11 @@ import CharacterModal2 from "@/components/region/CharacterModal2";
 import CharacterModal3 from "@/components/region/CharacterModal3";
 import ContentList2 from "@/components/region/ContentList2";
 import ModalMovieChanel3 from "@/components/region/ModalMovieChanel3";
+import ModalAvaDream from "@/components/region/ModalAvaDream";
 export default {
   name: "Region",
   components: {
+    ModalAvaDream,
       ModalMovieChanel3,
       ContentList2,
     CharacterModal1,

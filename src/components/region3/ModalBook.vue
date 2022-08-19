@@ -151,10 +151,11 @@ export default {
                 },
                 breakpoints: {
                     1279: {
-                        spaceBetween: 0,
+                      slidesPerView: 4,
+                      spaceBetween: 0,
                     },
                     768: {
-                        width: '195px',
+                        slidesPerView: 2,
                         spaceBetween: 0,
                     },
                 },
