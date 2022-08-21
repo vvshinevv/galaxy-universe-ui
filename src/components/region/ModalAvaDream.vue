@@ -56,6 +56,11 @@ export default {
       render();
       function init() {
         const container = document.getElementById('container');
+        console.log(container.childElementCount);
+        if (container.childElementCount > 0) {
+          return;
+        }
+        
         renderer = new THREE.WebGLRenderer({ antialias: true });
         renderer.setPixelRatio(window.devicePixelRatio);
         renderer.setSize(window.innerWidth, window.innerHeight);
