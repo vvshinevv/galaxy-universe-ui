@@ -1419,9 +1419,10 @@
   />
   <!-- 아바드림호 보러가기 노출 -->
   <ModalAvaDream
-    v-model:visible="showModal4"
-    :imgUrl="imgUrl2"
-    :imgUrlTitle="imgUrlTitle2"
+      v-if="showModal4"
+      v-model:visible="showModal4"
+      :imgUrl="imgUrl2"
+      :imgUrlTitle="imgUrlTitle2"
   />
   <!-- 웹툰 -->
   <!--  <ContentsToonModal-->

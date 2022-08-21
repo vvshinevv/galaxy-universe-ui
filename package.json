@@ -10,8 +10,10 @@
   "dependencies": {
     "babel-eslint": "^10.1.0",
     "core-js": "^3.8.3",
+    "es-module-shims": "^1.5.16",
     "sockjs-client": "^1.6.0",
     "swiper": "^8.3.0",
+    "three": "^0.143.0",
     "vue": "^3.2.13",
     "vue-gtag-next": "^1.14.0",
     "webstomp-client": "^1.2.6"

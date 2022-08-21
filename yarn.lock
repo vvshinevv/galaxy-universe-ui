@@ -3273,6 +3273,11 @@ es-module-lexer@^0.9.0:
   resolved "https://registry.npmjs.org/es-module-lexer/-/es-module-lexer-0.9.3.tgz"
   integrity sha512-1HQ2M2sPtxwnvOvT1ZClHyQDiggdNjURWpY2we6aMKCQiUVxTmVs2UYPLIrD84sS+kMdUwfBSylbJPwNnBrnHQ==
 
+es-module-shims@^1.5.16:
+  version "1.5.16"
+  resolved "https://registry.yarnpkg.com/es-module-shims/-/es-module-shims-1.5.16.tgz#c554bb8fcd9e2c565bfcebba3a423cdce07623e2"
+  integrity sha512-IluQmzUl0E9FW0cBf8mrWFEAjRpXSx3dYn2NDPHkEZIPj0BWa+acvfpHM8whUMh2oVBXp4+XPo2N6jhnrdLPJQ==
+
 escalade@^3.1.1:
   version "3.1.1"
   resolved "https://registry.npmjs.org/escalade/-/escalade-3.1.1.tgz"
@@ -7611,6 +7616,11 @@ thread-loader@^3.0.0:
     loader-utils "^2.0.0"
     neo-async "^2.6.2"
     schema-utils "^3.0.0"
+
+three@^0.143.0:
+  version "0.143.0"
+  resolved "https://registry.yarnpkg.com/three/-/three-0.143.0.tgz#1455bca132cc2b20beb7f41d313e10c29e5ed9df"
+  integrity sha512-oKcAGYHhJ46TGEuHjodo2n6TY2R6lbvrkp+feKZxqsUL/WkH7GKKaeu6RHeyb2Xjfk2dPLRKLsOP0KM2VgT8Zg==
 
 thunky@^1.0.2:
   version "1.1.0"
