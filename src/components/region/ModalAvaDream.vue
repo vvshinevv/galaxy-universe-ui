@@ -5,8 +5,8 @@
       <img :src="imgUrlTitle" class="title" />
       <div class="3d-image-box">
         <!--[D] 이 위치에 넣어 주시면 될 것 같아요. -->
-        <div id="container"></div>
-        <img :src="imgUrl" class="bg" />
+        <div id="container" class="bg"></div>
+        <!-- <img :src="imgUrl" class="bg" /> -->
       </div>
       <Footer />
     </div>
@@ -16,92 +16,14 @@
 <script>
 import Modal from "@/components/modal/Modal";
 import Footer from "@/components/footer/Footer";
-import {reactive, toRefs,onMounted} from "vue";
+import { reactive, toRefs, onMounted } from "vue";
 
 import * as THREE from "three";
-import Stats from '@/assets/jsm/libs/stats.module.js';
 import { OrbitControls } from '@/assets/jsm/controls/OrbitControls.js';
 import { RoomEnvironment } from '@/assets/jsm/environments/RoomEnvironment.js';
 import { GLTFLoader } from '@/assets/jsm/loaders/GLTFLoader.js';
-import { DRACOLoader } from '@/assets/jsm/loaders/DRACOLoader.js';
-
-let mixer;
-
-const clock = new THREE.Clock();
-const container = document.getElementById('container');
-const stats = new Stats();
-container.appendChild(stats.dom);
-
-const renderer = new THREE.WebGLRenderer({ antialias: true });
-renderer.setPixelRatio(window.devicePixelRatio);
-renderer.setSize(window.innerWidth, window.innerHeight);
-renderer.outputEncoding = THREE.sRGBEncoding;
-container.appendChild(renderer.domElement);
-
-const pmremGenerator = new THREE.PMREMGenerator(renderer);
-
-const scene = new THREE.Scene();
-scene.background = new THREE.Color(0xbfe3dd);
-scene.environment = pmremGenerator.fromScene(new RoomEnvironment(), 0.04).texture;
-
-const camera = new THREE.PerspectiveCamera(40, window.innerWidth / window.innerHeight, 1, 100);
-camera.position.set(5, 2, 8);
-
-const controls = new OrbitControls(camera, renderer.domElement);
-controls.target.set(0, 0.5, 0);
-controls.update();
-controls.enablePan = false;
-controls.enableDamping = true;
-
-const dracoLoader = new DRACOLoader();
-dracoLoader.setDecoderPath('@/assets/js/libs/draco/gltf/');
-
-const loader = new GLTFLoader();
-loader.setDRACOLoader(dracoLoader);
-loader.load('@/assets/models/gltf/LittlestTokyo.glb', function (gltf) {
-
-  const model = gltf.scene;
-  model.position.set(1, 1, 0);
-  model.scale.set(0.01, 0.01, 0.01);
-  scene.add(model);
-
-  mixer = new THREE.AnimationMixer(model);
-  mixer.clipAction(gltf.animations[0]).play();
-
-  animate();
-
-}, undefined, function (e) {
-
-  console.error(e);
-
-});
-
-
-window.onresize = function () {
-
-  camera.aspect = window.innerWidth / window.innerHeight;
-  camera.updateProjectionMatrix();
-
-  renderer.setSize(window.innerWidth, window.innerHeight);
-
-};
-
-
-function animate() {
-
-  requestAnimationFrame(animate);
-
-  const delta = clock.getDelta();
-
-  mixer.update(delta);
-
-  controls.update();
-
-  stats.update();
-
-  renderer.render(scene, camera);
-
-}
+import { KTX2Loader } from '@/assets/jsm/loaders/KTX2Loader.js';
+import { MeshoptDecoder } from '@/assets/jsm/libs/meshopt_decoder.module.js';
 
 export default {
   name: "ModalAvaDream",
@@ -128,9 +50,68 @@ export default {
   setup() {
     const state = reactive({
     });
-    onMounted(()=>{
-      const container = document.getElementById( 'container' );
-      console.log(container);
+    onMounted(() => {
+      let camera, scene, renderer, mesh;
+      init();
+      render();
+      function init() {
+        const container = document.getElementById('container');
+        renderer = new THREE.WebGLRenderer({ antialias: true });
+        renderer.setPixelRatio(window.devicePixelRatio);
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        renderer.toneMapping = THREE.ACESFilmicToneMapping;
+        renderer.toneMappingExposure = 1;
+        renderer.outputEncoding = THREE.sRGBEncoding;
+        container.appendChild(renderer.domElement);
+
+        camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 1, 2000);
+        camera.position.set(247.49371217485663, 583.5733538232143, -218.1554407552514);
+
+        const environment = new RoomEnvironment();
+        const pmremGenerator = new THREE.PMREMGenerator(renderer);
+
+        scene = new THREE.Scene();
+        scene.background = new THREE.Color(0xbbbbbb);
+        scene.environment = pmremGenerator.fromScene(environment).texture;
+
+        const ktx2Loader = new KTX2Loader()
+          .setTranscoderPath('basis/')
+          .detectSupport(renderer);
+
+        const loader = new GLTFLoader().setPath('models/gltf/');
+        loader.setKTX2Loader(ktx2Loader);
+        loader.setMeshoptDecoder(MeshoptDecoder);
+        loader.load('avadream.glb', function (gltf) {
+          mesh = gltf.scene;
+          mesh.scale.set(1500, 1500, 1500);
+          scene.add(gltf.scene);
+          render();
+        });
+
+        const controls = new OrbitControls(camera, renderer.domElement);
+        controls.addEventListener('change', render); // use if there is no animation loop
+        controls.minDistance = 400;
+        controls.maxDistance = 1000;
+        controls.update();
+        window.addEventListener('resize', onWindowResize);
+
+      }
+
+      function onWindowResize() {
+
+        camera.aspect = window.innerWidth / window.innerHeight;
+        camera.updateProjectionMatrix();
+
+        renderer.setSize(window.innerWidth, window.innerHeight);
+
+        render();
+
+      }
+
+      function render() {
+        
+        renderer.render(scene, camera);
+      }
     })
     return {
       ...toRefs(state),
