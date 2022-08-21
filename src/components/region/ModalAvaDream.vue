@@ -16,6 +16,7 @@
 <script>
 import Modal from "@/components/modal/Modal";
 import Footer from "@/components/footer/Footer";
+import {reactive, toRefs,onMounted} from "vue";
 
 import * as THREE from "three";
 import Stats from '@/assets/jsm/libs/stats.module.js';
@@ -102,7 +103,6 @@ function animate() {
 
 }
 
-
 export default {
   name: "ModalAvaDream",
   components: { Footer, Modal },
@@ -124,6 +124,17 @@ export default {
       type: String,
       default: "",
     },
+  },
+  setup() {
+    const state = reactive({
+    });
+    onMounted(()=>{
+      const container = document.getElementById( 'container' );
+      console.log(container);
+    })
+    return {
+      ...toRefs(state),
+    };
   },
 };
 </script>
