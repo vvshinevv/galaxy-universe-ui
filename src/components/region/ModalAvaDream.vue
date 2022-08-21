@@ -58,7 +58,7 @@ export default {
         const container = document.getElementById('container');
         renderer = new THREE.WebGLRenderer({ antialias: true });
         renderer.setPixelRatio(window.devicePixelRatio);
-        renderer.setSize(window.innerWidth - 1, window.innerHeight - 0.001);
+        renderer.setSize(window.innerWidth, window.innerHeight);
         renderer.toneMapping = THREE.ACESFilmicToneMapping;
         renderer.toneMappingExposure = 1;
         renderer.outputEncoding = THREE.sRGBEncoding;
