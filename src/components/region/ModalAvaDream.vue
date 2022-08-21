@@ -58,7 +58,7 @@ export default {
         const container = document.getElementById('container');
         console.log(container.childElementCount);
         if (container.childElementCount > 0) {
-          return;
+          container.removeChild(container.lastElementChild);
         }
         
         renderer = new THREE.WebGLRenderer({ antialias: true });
