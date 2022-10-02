@@ -39,7 +39,7 @@ $content-width: 1668px;
             @include breakpoint(tablet) {
             }
             @at-root .region1 & {
-                background: url("@/assets/image/region1/bg_region1_title.png")
+                background: url("@/assets/image/region1/bg_region1_title_v2.png")
                     no-repeat center;
                 background-size: contain;
             }
@@ -47,7 +47,7 @@ $content-width: 1668px;
                 bottom: -360px;
                 max-width: $content-width;
                 height: 700px;
-                background: url("@/assets/image/region2/bg_region2_title.png")
+                background: url("@/assets/image/region2/bg_region2_title_v2.png")
                     no-repeat center;
                 background-size: contain;
             }
@@ -234,10 +234,10 @@ $content-width: 1668px;
             position: relative;
             min-width: 1280px;
             max-width: $content-width;
-            height: 1700px;
-            background: url("@/assets/image/region1/bg_ava.png") no-repeat
+            height: 1100px;
+            background: url("@/assets/image/region1/bg_ava2.png") no-repeat
                 center;
-            background-size: 3400px auto;
+            background-size: cover;
             @include breakpoint(tablet) {
                 width: 100%;
                 min-width: 0;
@@ -245,10 +245,10 @@ $content-width: 1668px;
             @include breakpoint(mobile) {
                 width: 100%;
                 min-width: 0;
-                height: 1100px;
-                background: url("@/assets/image/region1/bg_ava_mo.png")
-                    no-repeat center;
-                background-size: 1670px auto;
+                height: 800px;
+                background: url("@/assets/image/region1/bg_ava2.png") no-repeat
+                    center;
+                background-size: cover;
             }
         } //.region-intro-image
         &-link {
@@ -332,19 +332,21 @@ $content-width: 1668px;
                 background: url("@/assets/image/region3/bg_r3.png") no-repeat
                     center;
 
-                //&:hover {
-                //    background: url("@/assets/image/bg_r1_2_over.png") no-repeat
-                //    center;
-                //}
+                &:hover {
+                    background: url("@/assets/image/region3/bg_r3_hover.png")
+                        no-repeat center;
+                    background-size: auto 350px;
+                }
             }
             &.r3_2 {
                 background: url("@/assets/image/region3/bg_r3_2.png") no-repeat
                     center;
 
-                //&:hover {
-                //    background: url("@/assets/image/bg_r1_2_over.png") no-repeat
-                //    center;
-                //}
+                &:hover {
+                    background: url("@/assets/image/region3/bg_r3_2_hover.png")
+                        no-repeat center;
+                    background-size: auto 350px;
+                }
             }
         } //.region-content-image
     }
@@ -436,7 +438,7 @@ $content-width: 1668px;
                     no-repeat center;
                 background-size: contain;
                 &:hover {
-                    background: url("@/assets/image/region2/rainbow_book.png")
+                    background: url("@/assets/image/region2/rainbow_book_hover.png")
                         no-repeat center;
                     background-size: contain;
                 }
@@ -451,7 +453,7 @@ $content-width: 1668px;
                     no-repeat center;
                 background-size: contain;
                 &:hover {
-                    background: url("@/assets/image/region3/first_book.png")
+                    background: url("@/assets/image/region3/first_book_hover.png")
                         no-repeat center;
                     background-size: contain;
                 }
@@ -493,6 +495,7 @@ $content-width: 1668px;
     margin-top: 300px;
     background: url("@/assets/image/region1/bg_character.png") no-repeat center
         top;
+    background-size: cover;
     @include breakpoint(mobile) {
         margin-top: 300px;
         background-size: cover;
@@ -619,18 +622,18 @@ $content-width: 1668px;
     width: 100%;
     max-width: $content-width;
     height: 64px;
-    margin: 60px auto;
-    padding: 0 0 40px;
+    margin: 0 auto;
+    padding: 60px 0;
     background: url("@/assets/image/region1/footer.png") no-repeat center top;
     @include breakpoint(tablet) {
         height: 160px;
-        margin: 40px auto;
+        margin: 0 auto;
         background: url("@/assets/image/region1/footer_mo.png") no-repeat center
             top;
     }
     @include breakpoint(mobile) {
         height: 160px;
-        margin: 40px auto;
+        margin: 0 auto;
         background: url("@/assets/image/region1/footer_mo.png") no-repeat center
             top;
     }

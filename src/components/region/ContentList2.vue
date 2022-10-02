@@ -130,7 +130,6 @@ export default {
 }
 .content-modal-list .footer{
     margin-top: auto;
-    margin-bottom: 30px;
     padding-bottom: 0;
 }
 </style>

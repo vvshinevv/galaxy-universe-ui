@@ -67,23 +67,23 @@ export default {
             showContentsModal: true,
             imgUrl: [
                 {
-                    src: require("@/assets/image/region2/modalWorldView/worldView1.png"),
-                    srcMobile: require("@/assets/image/region2/modalWorldView/worldView1_mo.png"),
+                    src: require("@/assets/image/region2/modalWorldView/worldView1_2.jpg"),
+                    srcMobile: require("@/assets/image/region2/modalWorldView/worldView1_2.jpg"),
                     text:`미리내의 상상의
 세계에선  그동안<br/>
 해보고 싶었던것들을 <br/>
 다 끄집어 낼수 있어요 .`
                 },
                 {
-                    src: require("@/assets/image/region2/modalWorldView/worldView2.png"),
-                    srcMobile: require("@/assets/image/region2/modalWorldView/worldView2_mo.png"),
+                    src: require("@/assets/image/region2/modalWorldView/worldView2_2.jpg"),
+                    srcMobile: require("@/assets/image/region2/modalWorldView/worldView2_2.jpg"),
                     text: `그리고 나도 모르는 다양한 행성에 <br/>
 다양한 모습을 하고 있는 <br/>
 사람들속에서 나를 찾죠`
                 },
                 {
-                    src: require("@/assets/image/region2/modalWorldView/worldView3.png"),
-                    srcMobile: require("@/assets/image/region2/modalWorldView/worldView3_mo.png"),
+                    src: require("@/assets/image/region2/modalWorldView/worldView3_2.jpg"),
+                    srcMobile: require("@/assets/image/region2/modalWorldView/worldView3_2.jpg"),
                     text: `그속에선 나는 의사선생님이<br/>
  되기도 하고<br/>
  운동선수도 되고 <br/>

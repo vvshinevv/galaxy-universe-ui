@@ -172,6 +172,7 @@
     <div class="icon-planet2 pc-only"></div>
     <div class="icon-planet3 "></div>
     <div class="icon-planet4 pc-only"></div>
+    <div class="icon-planet5 pc-only"></div>
   </div>
 
     <ModalWorldView
@@ -245,8 +246,9 @@ export default {
   width: 400px;
   height: 400px;
   margin-left: 750px;
-  background: url('@/assets/image/region2/ico_planet2.png');
-  background-size: cover;
+  background: url('@/assets/image/region2/ico_planet2_2.png') no-repeat;
+  background-size: contain;
+
 
 }
 .icon-planet3{
@@ -279,5 +281,15 @@ export default {
   margin-left: 800px;
   background: url('@/assets/image/region2/ico_planet4.png');
   background-size: cover;
+}
+.icon-planet5{
+  position: absolute;
+  top: 3900px;
+  left:50%;
+  width: 400px;
+  height: 400px;
+  margin-left: -1100px;
+  background: url('@/assets/image/region2/ico_planet5.png') no-repeat;
+  background-size: contain;
 }
 </style>

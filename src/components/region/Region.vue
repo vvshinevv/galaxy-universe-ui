@@ -148,7 +148,7 @@
       </div>
       <!-- 아바드림 호 소개 -->
       <div class="region-intro">
-        <h3 class="title" style="z-index: 10;transform:translateY(300px)">
+        <h3 class="title" style="z-index: 10;transform:translateY(200px)">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -1514,40 +1514,76 @@ export default {
         showContentsModal7: false,
       charList: [
         {
-          imgUrl: require("@/assets/image/region1/r_1_card.png"),
+          imgUrl: require("@/assets/image/region1/card_c_1.png"),
         },
         {
-          imgUrl: require("@/assets/image/region1/r_3_card.png"),
+          imgUrl: require("@/assets/image/region1/card_c_2.png"),
         },
         {
-          imgUrl: require("@/assets/image/region1/r_2_card.png"),
+          imgUrl: require("@/assets/image/region1/card_c_3.png"),
         },
         {
-          imgUrl: require("@/assets/image/region1/r_soon1.png"),
+          imgUrl: require("@/assets/image/region1/card_c_4.png"),
         },
         {
-          imgUrl: require("@/assets/image/region1/r_soon2.png"),
+          imgUrl: require("@/assets/image/region1/card_c_5.png"),
         },
         {
-          imgUrl: require("@/assets/image/region1/r_soon3.png"),
+          imgUrl: require("@/assets/image/region1/card_c_6.png"),
         },
         {
-          imgUrl: require("@/assets/image/region1/r_soon4.png"),
+          imgUrl: require("@/assets/image/region1/card_c_7.png"),
         },
         {
-          imgUrl: require("@/assets/image/region1/r_soon5.png"),
+          imgUrl: require("@/assets/image/region1/card_c_8.png"),
         },
         {
-          imgUrl: require("@/assets/image/region1/r_soon6.png"),
+          imgUrl: require("@/assets/image/region1/card_c_9.png"),
         },
         {
-          imgUrl: require("@/assets/image/region1/r_soon7.png"),
+          imgUrl: require("@/assets/image/region1/card_c_10.png"),
         },
         {
-          imgUrl: require("@/assets/image/region1/r_soon8.png"),
+          imgUrl: require("@/assets/image/region1/card_c_11.png"),
         },
         {
-          imgUrl: require("@/assets/image/region1/r_soon9.png"),
+          imgUrl: require("@/assets/image/region1/card_c_12.png"),
+        },
+        {
+          imgUrl: require("@/assets/image/region1/card_c_13.png"),
+        },
+        {
+          imgUrl: require("@/assets/image/region1/card_c_14.png"),
+        },
+        {
+          imgUrl: require("@/assets/image/region1/card_c_15.png"),
+        },
+        {
+          imgUrl: require("@/assets/image/region1/card_c_16.png"),
+        },
+        {
+          imgUrl: require("@/assets/image/region1/card_c_17.png"),
+        },
+        {
+          imgUrl: require("@/assets/image/region1/card_c_18.png"),
+        },
+        {
+          imgUrl: require("@/assets/image/region1/card_c_19.png"),
+        },
+        {
+          imgUrl: require("@/assets/image/region1/card_c_20.png"),
+        },
+        {
+          imgUrl: require("@/assets/image/region1/card_c_21.png"),
+        },
+        {
+          imgUrl: require("@/assets/image/region1/card_c_22.png"),
+        },
+        {
+          imgUrl: require("@/assets/image/region1/card_c_23.png"),
+        },
+        {
+          imgUrl: require("@/assets/image/region1/card_c_24.png"),
         },
       ],
     });

@@ -127,17 +127,17 @@ export default {
 
 <style scoped>
 .title {
-  margin: 0;
   top: 20px;
   left: 50%;
+  margin: 0;
   transform: translateX(-50%);
 }
 
 footer {
   position: absolute;
-  left: 0;
   right: 0;
   bottom: 0;
+  left: 0;
   margin-bottom: 0;
 }
 

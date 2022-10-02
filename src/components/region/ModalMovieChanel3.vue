@@ -32,7 +32,7 @@ export default {
     },
     setup() {
         const state = reactive({
-            movieUrl: require("@/assets/image/region1/ava.mp4"),
+            movieUrl: require("@/assets/image/region1/ava2.mp4"),
         });
         return {
             ...toRefs(state)

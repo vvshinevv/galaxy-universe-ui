@@ -110,11 +110,19 @@
 
 .icon-menu {
     display: none;
-    @include position(absolute, 10px, 18px, null, null);
+    @include position(absolute, 20px, 20px, null, null);
     @include breakpoint(mobile) {
         display: block;
     }
 }
 .icon-close {
     @include position(absolute, 20px, 20px, null, null);
+}
+.galaxy-header-logo img {
+    width: 160px;
+}
+@media (max-width: 767px) {
+    .galaxy-header-logo img {
+        width: 100px;
+    }
 }

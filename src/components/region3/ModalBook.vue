@@ -171,7 +171,7 @@ export default {
 
 <style scoped>
 .content-image-modal{
-  align-items: flex-start;
+  align-items: center;
 }
 img.mobile-only{
     width: 50%;

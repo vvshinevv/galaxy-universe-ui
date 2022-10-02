@@ -107,7 +107,6 @@ export default {
 
 <style scoped>
 .content-image-modal{
-  padding-bottom: 90px;
   font-family: 'Noto Serif KR', serif;
 }
 </style>
