@@ -687,7 +687,7 @@
           </svg>
         </h3>
         <ul class="content-image-list">
-          <li class="content-image-item" @click="showBook = true">
+          <li class="content-image-item" @click="showCommingSoon = true">
             <div class="image toon1"></div>
           </li>
         </ul>
@@ -850,7 +850,7 @@
             </g>
           </svg>
         </h3>
-        <div class="region-content-image r1" @click="showModal3 = true"></div>
+        <div class="region-content-image r1" @click="showCommingSoon = true"></div>
       </section>
       <!-- 아바드림 아바툰 -->
       <section class="region-content">
@@ -1021,7 +1021,7 @@
         </h3>
         <div
           class="region-content-image r1_2"
-          @click="showContentsModal3 = true"
+          @click="showCommingSoon = true"
         ></div>
       </section>
       <!-- 아바트리뷰트 -->
@@ -1187,7 +1187,7 @@
         </h3>
         <div
           class="region-content-image r1_3"
-          @click="showContentsModal7 = true"
+          @click="showCommingSoon = true"
         ></div>
       </section>
       <!-- 아바드림 캐릭터 -->

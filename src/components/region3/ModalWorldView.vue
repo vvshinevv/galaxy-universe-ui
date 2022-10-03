@@ -12,7 +12,7 @@
                                   :key="'slide_image_' + idx">
                         <img :src="image.src" class="pc-only"/>
                         <img :src="image.srcMobile" class="mobile-only"/>
-                        <p v-html="image.text"></p>
+                        <p v-html="image.text" class="mobile-only"></p>
                     </swiper-slide>
                 </swiper>
             </div>
@@ -57,23 +57,23 @@ export default {
             showContentsModal: true,
             imgUrl: [
                 {
-                    src: require("@/assets/image/region3/modalWorldView/worldView1.jpg"),
-                    srcMobile: require("@/assets/image/region3/modalWorldView/worldView1_mo.jpg"),
+                    src: require("@/assets/image/region3/modalWorldView/img_worldView1.jpg"),
+                    srcMobile: require("@/assets/image/region3/modalWorldView/img_worldView1.jpg"),
                     text:`우리가 눈을 뜨고 보고 듣고<br class="mobile-only">느끼는 현실과 우리가 눈을<br class="mobile-only"> 감고 상상하는<br class="mobile-only"> 세계가 있습니다`
                 },
                 {
-                    src: require("@/assets/image/region3/modalWorldView/worldView2.jpg"),
-                    srcMobile: require("@/assets/image/region3/modalWorldView/worldView2_mo.jpg"),
+                    src: require("@/assets/image/region3/modalWorldView/img_worldView2.jpg"),
+                    srcMobile: require("@/assets/image/region3/modalWorldView/img_worldView2.jpg"),
                     text: `현실에서 상상한<br class="mobile-only"> 것들을 통해 만들어 지는 세계,<br class="mobile-only"> 미리내 에서는 무엇이든<br class="mobile-only"> 경험하고 즐길수 있습니다`
                 },
                 {
-                    src: require("@/assets/image/region3/modalWorldView/worldView3.jpg"),
-                    srcMobile: require("@/assets/image/region3/modalWorldView/worldView3_mo.jpg"),
+                    src: require("@/assets/image/region3/modalWorldView/img_worldView3.jpg"),
+                    srcMobile: require("@/assets/image/region3/modalWorldView/img_worldView3.jpg"),
                     text: `미리내에서의 경험은<br class="mobile-only"> 현실로 돌아올때 꿈을 이루는<br class="mobile-only"> 희망으로 변태하여 현실에서<br class="mobile-only"> 꿈을 실현하는 에너지가 됩니다`
                 },
                 {
-                    src: require("@/assets/image/region3/modalWorldView/worldView4.jpg"),
-                    srcMobile: require("@/assets/image/region3/modalWorldView/worldView4_mo.jpg"),
+                    src: require("@/assets/image/region3/modalWorldView/img_worldView4.jpg"),
+                    srcMobile: require("@/assets/image/region3/modalWorldView/img_worldView4.jpg"),
                     text: `희망을 통해 이루어진<br class="mobile-only"> 꿈들은 더 많은 상상을 만들고<br class="mobile-only"> 더욱더 많은 사람에게<br class="mobile-only">더욱 즐겁고 행복을 선사합니다`
                 },
             ],
