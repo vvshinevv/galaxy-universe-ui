@@ -61,7 +61,7 @@ export default {
           container.removeChild(container.lastElementChild);
         }
         
-        renderer = new THREE.WebGLRenderer({ antialias: true });
+        renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
         renderer.setPixelRatio(window.devicePixelRatio);
         renderer.setSize(window.innerWidth, window.innerHeight);
         renderer.toneMapping = THREE.ACESFilmicToneMapping;
@@ -76,7 +76,7 @@ export default {
         const pmremGenerator = new THREE.PMREMGenerator(renderer);
 
         scene = new THREE.Scene();
-        scene.background = new THREE.Color(0xbbbbbb);
+        // scene.background = new THREE.Color(0xbbbbbb);
         scene.environment = pmremGenerator.fromScene(environment).texture;
 
         const ktx2Loader = new KTX2Loader()
@@ -103,18 +103,13 @@ export default {
       }
 
       function onWindowResize() {
-
         camera.aspect = window.innerWidth / window.innerHeight;
         camera.updateProjectionMatrix();
-
         renderer.setSize(window.innerWidth, window.innerHeight);
-
         render();
-
       }
 
       function render() {
-        
         renderer.render(scene, camera);
       }
     })
