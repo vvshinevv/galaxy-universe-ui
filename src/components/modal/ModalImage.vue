@@ -7,7 +7,7 @@
     :dimClose="true"
   >
     <div class="modal-image-box">
-        <img :src="imgUrlTitle" class="title"/>
+      <img :src="imgUrlTitle" class="title" />
       <img :src="imgUrl" class="bg" />
     </div>
   </Modal>
@@ -27,10 +27,10 @@ export default {
       type: String,
       default: "",
     },
-      imgUrlTitle: {
-          type: String,
-          default: "",
-      },
+    imgUrlTitle: {
+      type: String,
+      default: "",
+    },
   },
 };
 </script>

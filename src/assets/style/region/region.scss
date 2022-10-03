@@ -524,13 +524,13 @@ $content-width: 1668px;
         flex-wrap: wrap;
         max-width: 1280px;
         margin: 0 auto;
-        padding-top: 300px;
+        padding-top: 500px;
 
         @include breakpoint(tablet) {
             flex-wrap: nowrap;
             width: 100%;
             margin: 0 0 140px;
-            padding: 200px 0 0;
+            padding: 240px 0 0;
             overflow-x: scroll;
             overflow-y: hidden;
         }

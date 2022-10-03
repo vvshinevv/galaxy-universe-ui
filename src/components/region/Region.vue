@@ -148,7 +148,7 @@
       </div>
       <!-- 아바드림 호 소개 -->
       <div class="region-intro">
-        <h3 class="title" style="z-index: 10;transform:translateY(200px)">
+        <h3 class="title" style="z-index: 10; transform: translateY(200px)">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -1185,7 +1185,10 @@
             </g>
           </svg>
         </h3>
-        <div class="region-content-image r1_3" @click="showContentsModal7 = true"></div>
+        <div
+          class="region-content-image r1_3"
+          @click="showContentsModal7 = true"
+        ></div>
       </section>
       <!-- 아바드림 캐릭터 -->
       <section class="region-character">
@@ -1419,10 +1422,10 @@
   />
   <!-- 아바드림호 보러가기 노출 -->
   <ModalAvaDream
-      v-if="showModal4"
-      v-model:visible="showModal4"
-      :imgUrl="imgUrl2"
-      :imgUrlTitle="imgUrlTitle2"
+    v-if="showModal4"
+    v-model:visible="showModal4"
+    :imgUrl="imgUrl2"
+    :imgUrlTitle="imgUrlTitle2"
   />
   <!-- 웹툰 -->
   <!--  <ContentsToonModal-->
@@ -1437,10 +1440,12 @@
     :title="'드림캐처 1화'"
     v-model:visible="showBook"
   />
-    <!--아바드림호보기 -->
-    <ModalMovieChanel3  :showContentsModal="showModal2"
-                       v-model:visible="showModal2"/>
-    <ModalMovie :showContentsModal="showModal3" v-model:visible="showModal3" />
+  <!--아바드림호보기 -->
+  <ModalMovieChanel3
+    :showContentsModal="showModal2"
+    v-model:visible="showModal2"
+  />
+  <ModalMovie :showContentsModal="showModal3" v-model:visible="showModal3" />
   <ContentList
     @update:visible="showContentsModal3 = $event"
     :showContentsModal="showContentsModal3"
@@ -1457,12 +1462,21 @@
     :showContentsModal="showContentsModal5"
   />
   <!-- 캐릭터카드 삐뚜루 -->
-  <CharacterModal3
-    @update:visible="showContentsModal6 = $event"
-    :showContentsModal="showContentsModal6"
+  <!--  <CharacterModal3-->
+  <!--    @update:visible="showContentsModal6 = $event"-->
+  <!--    :showContentsModal="showContentsModal6"-->
+  <!--  />-->
+  <!-- Comming soon -->
+  <ModalCommingSoon
+    :imgUrl="imgComming"
+    :imgUrlMo="imgCommingMo"
+    v-model:visible="showCommingSoon"
   />
-    <!-- 아바트리뷰트-->
-    <ContentList2 @update:visible="showContentsModal7 = $event" :showContentsModal="showContentsModal7"/>
+  <!-- 아바트리뷰트-->
+  <ContentList2
+    @update:visible="showContentsModal7 = $event"
+    :showContentsModal="showContentsModal7"
+  />
 </template>
 
 <script>
@@ -1479,12 +1493,14 @@ import CharacterModal3 from "@/components/region/CharacterModal3";
 import ContentList2 from "@/components/region/ContentList2";
 import ModalMovieChanel3 from "@/components/region/ModalMovieChanel3";
 import ModalAvaDream from "@/components/region/ModalAvaDream";
+import ModalCommingSoon from "@/components/region/ModalCommingSoon";
 export default {
   name: "Region",
   components: {
+    ModalCommingSoon,
     ModalAvaDream,
-      ModalMovieChanel3,
-      ContentList2,
+    ModalMovieChanel3,
+    ContentList2,
     CharacterModal1,
     CharacterModal2,
     CharacterModal3,
@@ -1500,7 +1516,7 @@ export default {
       showModal: false,
       showModal2: false,
       showModal3: false,
-        showModal4: false,
+      showModal4: false,
       imgUrl: "",
       imgUrl2: "",
       imgUrlTitle: "",
@@ -1511,7 +1527,10 @@ export default {
       showContentsModal4: false,
       showContentsModal5: false,
       showContentsModal6: false,
-        showContentsModal7: false,
+      showContentsModal7: false,
+      showCommingSoon: false,
+      imgComming: require("@/assets/image/img_comming.jpg"),
+      imgCommingMo: require("@/assets/image/img_comming_mo.jpg"),
       charList: [
         {
           imgUrl: require("@/assets/image/region1/card_c_1.png"),
@@ -1588,13 +1607,13 @@ export default {
       ],
     });
     //comming Soon
-      const commingSoon = () => {
-          state.showModal = true;
-          state.imgUrl = require("@/assets/image/region1/bg_comming.jpg");
-          state.imgUrlTitle = require("@/assets/image/region1/bg_comming_title.png");
-      }
+    const commingSoon = () => {
+      state.showModal = true;
+      state.imgUrl = require("@/assets/image/region1/bg_comming.jpg");
+      state.imgUrlTitle = require("@/assets/image/region1/bg_comming_title.png");
+    };
     const clickImage = () => {
-        state.showModal2 = true;
+      state.showModal2 = true;
     };
     const clickImage2 = () => {
       state.showModal4 = true;
@@ -1607,8 +1626,8 @@ export default {
         state.showContentsModal4 = true;
       } else if (cardNum === 1) {
         state.showContentsModal5 = true;
-      } else if (cardNum === 2) {
-        state.showContentsModal6 = true;
+      } else {
+        state.showCommingSoon = true;
       }
     };
     return {
