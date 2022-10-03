@@ -687,7 +687,7 @@
           </svg>
         </h3>
         <ul class="content-image-list">
-          <li class="content-image-item" @click="showCommingSoon = true">
+          <li class="content-image-item" @click="showBook = true">
             <div class="image toon1"></div>
           </li>
         </ul>
