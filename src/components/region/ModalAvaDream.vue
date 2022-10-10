@@ -122,7 +122,7 @@ export default {
 
 <style scoped>
 :deep(.modal-image){
-  background: url("@/assets/image/region1/bg_ava.jpeg") no-repeat center;
+  background: url("@/assets/image/region1/bg_ava.jpg") no-repeat center;
   background-size: cover;
 }
 .title {
