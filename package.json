@@ -16,7 +16,8 @@
     "three": "^0.143.0",
     "vue": "^3.2.13",
     "vue-gtag-next": "^1.14.0",
-    "webstomp-client": "^1.2.6"
+    "webstomp-client": "^1.2.6",
+    "wow.js": "^1.2.2"
   },
   "devDependencies": {
     "@babel/core": "^7.12.16",
@@ -45,7 +46,8 @@
     "stylelint-prettier": "^1.1.2",
     "stylelint-scss": "^3.19.0",
     "vue-loader": "^17.0.0",
-    "vue-router": "^4.0.16"
+    "vue-router": "^4.0.16",
+    "wowjs": "^1.1.3"
   },
   "eslintConfig": {
     "root": true,

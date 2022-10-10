@@ -58,23 +58,28 @@ export default {
             imgUrl: [
                 {
                     src: require("@/assets/image/region3/modalWorldView/img_worldView1.jpg"),
-                    srcMobile: require("@/assets/image/region3/modalWorldView/img_worldView1.jpg"),
-                    text:`우리가 눈을 뜨고 보고 듣고<br class="mobile-only">느끼는 현실과 우리가 눈을<br class="mobile-only"> 감고 상상하는<br class="mobile-only"> 세계가 있습니다`
+                    srcMobile: require("@/assets/image/region3/modalWorldView/img_worldView1_mo.jpg"),
+                    text:`현실의 세계와<br class="mobile-only">상상의 세계`
                 },
                 {
                     src: require("@/assets/image/region3/modalWorldView/img_worldView2.jpg"),
-                    srcMobile: require("@/assets/image/region3/modalWorldView/img_worldView2.jpg"),
-                    text: `현실에서 상상한<br class="mobile-only"> 것들을 통해 만들어 지는 세계,<br class="mobile-only"> 미리내 에서는 무엇이든<br class="mobile-only"> 경험하고 즐길수 있습니다`
+                    srcMobile: require("@/assets/image/region3/modalWorldView/img_worldView2_mo.jpg"),
+                    text: `현실의 세계에서는  경험하고 <br class="mobile-only">상상의 세계는 깨우친다`
                 },
                 {
                     src: require("@/assets/image/region3/modalWorldView/img_worldView3.jpg"),
-                    srcMobile: require("@/assets/image/region3/modalWorldView/img_worldView3.jpg"),
-                    text: `미리내에서의 경험은<br class="mobile-only"> 현실로 돌아올때 꿈을 이루는<br class="mobile-only"> 희망으로 변태하여 현실에서<br class="mobile-only"> 꿈을 실현하는 에너지가 됩니다`
+                    srcMobile: require("@/assets/image/region3/modalWorldView/img_worldView3_mo.jpg"),
+                    text: `현실에서는 하나의 자신을 보지만  <br class="mobile-only">
+상상의 세계에서는 다양한 모습, <br class="mobile-only">
+이상적인 나의 모습을 볼 수 있다.`
                 },
                 {
                     src: require("@/assets/image/region3/modalWorldView/img_worldView4.jpg"),
-                    srcMobile: require("@/assets/image/region3/modalWorldView/img_worldView4.jpg"),
-                    text: `희망을 통해 이루어진<br class="mobile-only"> 꿈들은 더 많은 상상을 만들고<br class="mobile-only"> 더욱더 많은 사람에게<br class="mobile-only">더욱 즐겁고 행복을 선사합니다`
+                    srcMobile: require("@/assets/image/region3/modalWorldView/img_worldView4_mo.jpg"),
+                    text: `현실의 나와 상상의 내가 <br class="mobile-only">
+이어지는 순간 (갤럭시 메타버스)<br class="mobile-only">
+우린 무한한 힘을 느끼고 <br class="mobile-only">
+꿈(상상)을 현실로 이루어낸다.`
                 },
             ],
             swiperOption: {
@@ -108,5 +113,10 @@ export default {
 <style scoped>
 .content-image-modal{
   font-family: 'Noto Serif KR', serif;
+}
+@media (max-width: 767px){
+    .modal-close {
+        top: auto !important;
+    }
 }
 </style>

@@ -19,3 +19,79 @@ body {
     position: relative;
     overflow-x: hidden;
 }
+
+//footer
+.footer {
+    display: flex;
+    justify-content: space-between;
+    flex: none;
+    width: 100%;
+    max-width: 1668px;
+    margin: 0 auto;
+    font-size: 11px;
+    padding-top: 24px;
+    padding-bottom: 36px;
+    @include breakpoint(tablet) {
+        display: block;
+        text-align: center;
+    }
+    @include breakpoint(mobile) {
+        display: block;
+        text-align: center;
+    }
+    ul{
+        display: flex;
+        margin-top: 5px;
+        margin-left: 40px;
+        @include breakpoint(tablet) {
+            margin-top: 20px;
+            margin-left: 0;
+            justify-content: center;
+        }
+        @include breakpoint(mobile) {
+            margin-top: 20px;
+            margin-left: 0;
+            justify-content: center;
+        }
+        li{
+            &:first-child::before{
+                display: none;
+            }
+            &::before{
+                content:'';
+                display: inline-block;
+                width: 1px;
+                height: 11px;
+                margin: 0 4px;
+                background: #fff;
+            }
+        }
+    }
+    p{
+        margin-top: 10px;
+        margin-left: 40px;
+        font-weight: bold;
+        line-height: 18px;
+        @include breakpoint(tablet) {
+            margin-left: 0;
+            text-align: center;
+        }
+        @include breakpoint(mobile) {
+            margin-left: 0;
+            text-align: center;
+        }
+    }
+    .footer-right{
+        margin-top: 45px;
+
+        @include breakpoint(tablet) {
+            margin-top: 20px;
+        }
+        @include breakpoint(mobile) {
+            margin-top: 20px;
+        }
+        svg{
+            margin-left: 20px;
+        }
+    }
+}

@@ -119,10 +119,11 @@
     @include position(absolute, 20px, 20px, null, null);
 }
 .galaxy-header-logo img {
-    width: 160px;
-}
-@media (max-width: 767px) {
-    .galaxy-header-logo img {
+    width: 180px;
+    @include breakpoint(tablet) {
+        width: 120px;
+    }
+    @include breakpoint(mobile) {
         width: 100px;
     }
 }

@@ -139,6 +139,23 @@ export default {
                         text2: ''
                     }
                 },
+                {
+                    src: require("@/assets/image/region3/modalBook/book5.jpg"),
+                    srcMobile: require("@/assets/image/region3/modalBook/book5mo.jpg"),
+                    text: {
+                        title: '또 다른 나의 발견과 탄생 ‘아토’',
+                        title2: '아토',
+                        text1:'나에게서 떨어져 나간 이 부분 그 일부분\n' +
+                            '으로 꿈을 완전체를 만드는 것.\n' +
+                            '\n' +
+                            '나이도 성별도 어떤 것도 장애물이 될 수 없는 내가\n' +
+                            ' 만든 또 다른 나.\n' +
+                            '나를 통해 나를 돌아보는꿈같은 일이 \n' +
+                            '가능한 세상 그 세상에서 \n' +
+                            '나는 자유를 얻게 된다.',
+                        text2: ''
+                    }
+                },
             ],
             swiperOption: {
                 slidesPerView: 1,
@@ -199,5 +216,10 @@ img.mobile-only{
     font-family: 'Noto Serif KR', serif;
     line-height:2em;
     white-space: pre-line;
+}
+@media (max-width: 767px){
+    .modal-close {
+        top: auto !important;
+    }
 }
 </style>
