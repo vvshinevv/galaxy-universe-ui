@@ -3,7 +3,7 @@
     <div class="content-character-box v2">
       <div class="main-character">
         <h3 class="main-character-title">
-          <img :src="titleUrl" />
+          <img :src="titleUrl"/>
         </h3>
         <p class="main-character-text">
           선과 악을 넘나드는 두 얼굴의 사나이!<br />

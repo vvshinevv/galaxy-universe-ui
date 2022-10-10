@@ -134,24 +134,25 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.content-image-modal {
-  height: 100%;
-}
-.content-image-box {
-  height: 100%;
-}
-.swiper-box {
-  height: 100%;
-}
-.swiper {
-  height: 100%;
-}
-.swiper-slide {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
+
 @media (max-width: 767px) {
+    .content-image-modal {
+        height: 100%;
+    }
+    .content-image-box {
+        height: 100%;
+    }
+    .swiper-box {
+        height: 100%;
+    }
+    .swiper {
+        height: 100%;
+    }
+    .swiper-slide {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
   .modal-close {
     z-index: 10;
     top: auto !important;

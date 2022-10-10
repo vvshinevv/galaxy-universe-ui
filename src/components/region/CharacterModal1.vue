@@ -3,7 +3,8 @@
     <div class="content-character-box">
       <div class="main-character">
         <h3 class="main-character-title">
-          <img :src="titleUrl" />
+          <img :src="titleUrl" class="pc-only" />
+          <img :src="titleUrlMo" class="mobile-only" />
         </h3>
         <p class="main-character-text">
           온 우주를 떠돌며 모든 것을 기록하는<br />
@@ -234,6 +235,7 @@ export default {
   setup() {
     const state = reactive({
       titleUrl: require("@/assets/image/region1/bg_char_title_v2.png"),
+      titleUrlMo: require("@/assets/image/region1/bg_char_title_v2_mo.png"),
     });
     return {
       ...toRefs(state),
