@@ -98,25 +98,81 @@ export default {
       titleUrl: require("@/assets/image/region1/avatoon_title.png"),
       imgUrl: [
         {
-          src: require("@/assets/image/region1/avatoon_1.png"),
-          key: 1,
-        },
-        {
-          src: require("@/assets/image/region1/avatoon_2.png"),
-          key: 2,
-        },
-        {
-          src: require("@/assets/image/region1/avatoon_3.png"),
+          src: require("@/assets/image/region1/avatoon_1.jpg"),
           key: null,
         },
         {
-          src: require("@/assets/image/region1/avatoon_4.png"),
+          src: require("@/assets/image/region1/avatoon_2.jpg"),
           key: null,
         },
         {
-          src: require("@/assets/image/region1/avatoon_5.png"),
+          src: require("@/assets/image/region1/avatoon_3.jpg"),
           key: null,
         },
+        {
+          src: require("@/assets/image/region1/avatoon_4.jpg"),
+          key: null,
+        },
+        {
+          src: require("@/assets/image/region1/avatoon_5.jpg"),
+          key: null,
+        },
+          {
+              src: require("@/assets/image/region1/avatoon_6.jpg"),
+              key: null,
+          },
+          {
+              src: require("@/assets/image/region1/avatoon_7.jpg"),
+              key: null,
+          },
+          {
+              src: require("@/assets/image/region1/avatoon_8.jpg"),
+              key: null,
+          },
+          {
+              src: require("@/assets/image/region1/avatoon_9.jpg"),
+              key: null,
+          },
+          {
+              src: require("@/assets/image/region1/avatoon_10.jpg"),
+              key: null,
+          },
+          {
+              src: require("@/assets/image/region1/avatoon_11.jpg"),
+              key: null,
+          },
+          {
+              src: require("@/assets/image/region1/avatoon_12.jpg"),
+              key: null,
+          },
+          {
+              src: require("@/assets/image/region1/avatoon_13.jpg"),
+              key: null,
+          },
+          {
+              src: require("@/assets/image/region1/avatoon_14.jpg"),
+              key: null,
+          },
+          {
+              src: require("@/assets/image/region1/avatoon_15.jpg"),
+              key: null,
+          },
+          {
+              src: require("@/assets/image/region1/avatoon_16.jpg"),
+              key: null,
+          },
+          {
+              src: require("@/assets/image/region1/avatoon_17.jpg"),
+              key: null,
+          },
+          {
+              src: require("@/assets/image/region1/avatoon_18.jpg"),
+              key: null,
+          },
+          {
+              src: require("@/assets/image/region1/avatoon_19.jpg"),
+              key: null,
+          },
       ],
       showModal: false,
       showModal2: false,
@@ -181,6 +237,12 @@ export default {
 .content-list-title {
   margin-bottom: 40px;
 }
+.content-modal-title{
+    background: transparent;
+}
+.content-modal-list{
+    background: url("@/assets/image/region1/bg_character.png") no-repeat center;
+}
 .content-toon-list {
   flex-wrap: nowrap;
   overflow-x: auto;
@@ -194,17 +256,18 @@ export default {
   }
   li {
     flex: none;
-    width: 300px;
+    width: 400px;
     height: 400px;
     margin: 0 15px;
     @media (min-width: 768px) and (max-width: 1279px) {
-      width: 240px;
+      width: 300px;
       height: 300px;
     }
     @media (max-width: 768px) {
       width: auto;
       margin-bottom: 30px;
-      padding-top: 120%;
+      padding-top: 100%;
+        height:auto;
     }
   }
 }
@@ -212,5 +275,8 @@ export default {
   margin-top: auto;
   //margin-bottom: 30px;
   padding-bottom: 0;
+}
+.footer{
+    margin-bottom: 20px;
 }
 </style>

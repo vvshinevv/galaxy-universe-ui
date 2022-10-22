@@ -1049,7 +1049,7 @@
         </h3>
         <div
           class="region-content-image r1_2"
-          @click="showCommingSoon = true"
+          @click="showContentsModal3 = true"
         ></div>
       </section>
       <!-- 아바트리뷰트 -->
@@ -1461,11 +1461,11 @@
     :imgUrlTitle="imgUrlTitle2"
   />
   <!-- 웹툰 -->
-  <!--  <ContentsToonModal-->
-  <!--    :showContentsModal="showToon"-->
-  <!--    :title="'아바드림 1화'"-->
-  <!--    v-model:visible="showToon"-->
-  <!--  />-->
+  <!--    <ContentsToonModal-->
+  <!--      :showContentsModal="showToon"-->
+  <!--      :title="'아바드림 1화'"-->
+  <!--      v-model:visible="showToon"-->
+  <!--    />-->
 
   <!-- 아바드림 웹소설 -->
   <ContentsModal
@@ -1479,26 +1479,42 @@
     v-model:visible="showModal2"
   />
   <ModalMovie :showContentsModal="showModal3" v-model:visible="showModal3" />
+  <!-- 아바툰 -->
   <ContentList
     @update:visible="showContentsModal3 = $event"
     :showContentsModal="showContentsModal3"
   />
 
-  <!-- 캐릭터카드 동보희 -->
+  <!-- 캐릭터카드 기록희 -->
   <CharacterModal1
     @update:visible="showContentsModal4 = $event"
     :showContentsModal="showContentsModal4"
   />
-  <!-- 캐릭터카드 젤리곰 -->
+  <!-- 캐릭터카드 음악깡패 -->
   <CharacterModal2
     @update:visible="showContentsModal5 = $event"
     :showContentsModal="showContentsModal5"
   />
-  <!-- 캐릭터카드 삐뚜루 -->
-  <!--  <CharacterModal3-->
-  <!--    @update:visible="showContentsModal6 = $event"-->
-  <!--    :showContentsModal="showContentsModal6"-->
-  <!--  />-->
+  <!-- 캐릭터카드 삐뚜루빼뚜루 -->
+  <CharacterModal3
+    @update:visible="showContentsModal6 = $event"
+    :showContentsModal="showContentsModal6"
+  />
+  <!-- 캐릭터카드 커엽이 -->
+  <CharacterModal4
+    @update:visible="showContentsModal8 = $event"
+    :showContentsModal="showContentsModal8"
+  />
+  <!-- 캐릭터카드 반이바니 -->
+  <CharacterModal5
+    @update:visible="showContentsModal9 = $event"
+    :showContentsModal="showContentsModal9"
+  />
+  <!-- 캐릭터카드 마리앙 -->
+  <CharacterModal6
+    @update:visible="showContentsModal10 = $event"
+    :showContentsModal="showContentsModal10"
+  />
   <!-- Comming soon -->
   <ModalCommingSoon
     :imgUrl="imgComming"
@@ -1523,6 +1539,9 @@ import ContentList from "@/components/region/ContentList";
 import CharacterModal1 from "@/components/region/CharacterModal1";
 import CharacterModal2 from "@/components/region/CharacterModal2";
 import CharacterModal3 from "@/components/region/CharacterModal3";
+import CharacterModal4 from "@/components/region/CharacterModal4";
+import CharacterModal5 from "@/components/region/CharacterModal5";
+import CharacterModal6 from "@/components/region/CharacterModal6";
 import ContentList2 from "@/components/region/ContentList2";
 import ModalMovieChanel3 from "@/components/region/ModalMovieChanel3";
 import ModalAvaDream from "@/components/region/ModalAvaDream";
@@ -1538,6 +1557,9 @@ export default {
     CharacterModal1,
     CharacterModal2,
     CharacterModal3,
+    CharacterModal4,
+    CharacterModal5,
+    CharacterModal6,
     ContentList,
     ModalMovie,
     ContentsModal,
@@ -1572,6 +1594,9 @@ export default {
       showContentsModal5: false,
       showContentsModal6: false,
       showContentsModal7: false,
+      showContentsModal8: false,
+      showContentsModal9: false,
+      showContentsModal10: false,
       showCommingSoon: false,
       imgComming: require("@/assets/image/img_comming.jpg"),
       imgCommingMo: require("@/assets/image/img_comming_mo.jpg"),
@@ -1583,16 +1608,16 @@ export default {
           imgUrl: require("@/assets/image/region1/card_c_2.png"),
         },
         {
-          imgUrl: require("@/assets/image/region1/card_c_3.png"),
+          imgUrl: require("@/assets/image/region1/card_c_3_open.png"),
         },
         {
-          imgUrl: require("@/assets/image/region1/card_c_4.png"),
+          imgUrl: require("@/assets/image/region1/card_c_4_open.png"),
         },
         {
-          imgUrl: require("@/assets/image/region1/card_c_5.png"),
+          imgUrl: require("@/assets/image/region1/card_c_5_open.png"),
         },
         {
-          imgUrl: require("@/assets/image/region1/card_c_6.png"),
+          imgUrl: require("@/assets/image/region1/card_c_6_open.png"),
         },
         {
           imgUrl: require("@/assets/image/region1/card_c_7.png"),
@@ -1670,6 +1695,14 @@ export default {
         state.showContentsModal4 = true;
       } else if (cardNum === 1) {
         state.showContentsModal5 = true;
+      } else if (cardNum === 2) {
+        state.showContentsModal6 = true;
+      } else if (cardNum === 3) {
+        state.showContentsModal8 = true;
+      } else if (cardNum === 4) {
+        state.showContentsModal9 = true;
+      } else if (cardNum === 5) {
+        state.showContentsModal10 = true;
       } else {
         state.showCommingSoon = true;
       }

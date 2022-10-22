@@ -156,6 +156,15 @@
 .content-character-box.v3::after {
   background-image: url("@/assets/image/region1/bg_char3.png");
 }
+.content-character-box.v4::after {
+  background-image: url("@/assets/image/region1/bg_char4.png");
+}
+.content-character-box.v5::after {
+  background-image: url("@/assets/image/region1/bg_char5.png");
+}
+.content-character-box.v6::after {
+  background-image: url("@/assets/image/region1/bg_char6.png");
+}
 .main-character {
   position: relative;
   z-index: 10;
