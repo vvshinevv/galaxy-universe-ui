@@ -1223,7 +1223,7 @@
         ></div>
       </section>
       <!-- 아바드림 캐릭터 -->
-      <section class="region-character">
+      <section class="region-character" id="regionCharacter">
         <h3 class="region-character-title">
           <svg
             xmlns="http://www.w3.org/2000/svg"
