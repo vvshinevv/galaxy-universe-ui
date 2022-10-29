@@ -1766,12 +1766,12 @@ export default {
 .scroll-box {
   position: relative;
 }
-:deep(.scroll-parallax) {
+:global(.scroll-box > div) {
   position: absolute;
   top: -100px;
 }
 @media (max-width: 768px) {
-  :deep(.scroll-parallax) {
+    :global(.scroll-box > div){
     top: -200px;
     img {
       height: 700px;
