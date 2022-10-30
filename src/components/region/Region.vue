@@ -1770,12 +1770,16 @@ export default {
   position: absolute;
   top: -100px;
 }
+
 @media (max-width: 768px) {
   :global(.scroll-box > div) {
     top: -200px;
     img {
       height: 700px;
     }
+  }
+  :global(.scroll-box .img__background) {
+    height: 700px;
   }
 }
 .title {
