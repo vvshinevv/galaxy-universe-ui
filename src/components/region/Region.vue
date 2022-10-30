@@ -1450,7 +1450,12 @@
           </svg>
         </h3>
         <ul class="region-card-list">
-          <li class="region-card-item" v-for="(item, index) of charList">
+          <li
+            class="region-card-item wow fadeInUp animated"
+            data-wow-duration="1s"
+            :data-wow-delay="`${0.1 * index}s`"
+            v-for="(item, index) of charList"
+          >
             <button type="button" class="image" @click="characterModal(index)">
               <img :src="item.imgUrl" class="image" />
             </button>
