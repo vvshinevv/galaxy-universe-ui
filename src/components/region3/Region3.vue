@@ -33,13 +33,13 @@
           </svg>
         </div>
         <div class="region-main-p">
-          <p>
+          <p class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s">
             눈을 감아 빛이 사라지는 순간<br class="mobile-only" />
             펼쳐지는 새로운 세계<br />
             상상하는대로 이루어지고 모든 것이<br class="mobile-only" />
             가능한 세상 ‘너머에’
           </p>
-          <p>
+          <p class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s">
             꿈을 통해 그토록 바라고<br class="mobile-only" />
             그리던 모습을 발견하는 순간<br />
             기억의 찰나가 저장되어 있는 나만의<br class="mobile-only" />
@@ -47,7 +47,7 @@
             며칠 전 꾸었던 꿈이 생생하게 현실로<br class="mobile-only" />
             이루어지는 느낌을 기억하며
           </p>
-          <p>
+          <p class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s">
             다시 눈을 뜨는 순간 ‘지나온’<br />
             이 구간을 통해 현실에서<br class="mobile-only" />
             한발 나아갈 수 있다면<br />

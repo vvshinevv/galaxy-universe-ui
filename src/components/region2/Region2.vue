@@ -48,20 +48,20 @@
           </svg>
         </div>
         <div class="region-main-p">
-          <p>
+          <p class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s">
             나 하나로 시작되는 현실에서<br />
             답답함을 느꼈다면<br />
             페르소니아계는 다양한<br />
             모습을 찾고, 만날 수 있습니다.
           </p>
-          <p>
+          <p class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s">
             새로운 세계 속<br />
             다양한 모습의 나<br />
             노래하는 가수이자, 춤추는 댄서<br />
             요리도 할 수 있으며, 운동선수도 가능한<br />
             작지만 거대한 꿈 속 나의 모습<br />
           </p>
-          <p>
+          <p class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s">
             내면 깊은 곳에 숨겨져 있던<br />
             또 다른 ‘나’를 펼쳐내는 순간<br />
             놀라운 ‘나’를 만날 수 있습니다<br />

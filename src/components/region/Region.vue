@@ -74,44 +74,24 @@
           </svg>
         </div>
         <div class="region-main-p">
-          <p
-            class="wow bounceInUp center"
-            data-wow-duration="1s"
-            data-wow-delay="0.5s"
-          >
+          <p class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s">
             잠재되어 있는 꿈, 진실되고 간절한 진짜 내 꿈
           </p>
-          <p
-            class="wow bounceInUp center"
-            data-wow-duration="1s"
-            data-wow-delay="0.5s"
-          >
+          <p class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s">
             키가 작은 농구선수, 휠체어를 탄 모델,<br />
             80세를 훌쩍 넘긴 할아버지 댄서
           </p>
-          <p
-            class="wow bounceInUp center"
-            data-wow-duration="1s"
-            data-wow-delay="0.5s"
-          >
+          <p class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s">
             모두가 불가능하다 할 때<br />
             빛으로 색과 계절을 만들고, 꿈으로 산과 들을 만드는 것<br />
             우리는 이것을 기적이자 ‘초월’이라 합니다.
           </p>
-          <p
-            class="wow bounceInUp center"
-            data-wow-duration="1s"
-            data-wow-delay="0.5s"
-          >
+          <p class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s">
             동경하던 꿈이 이루어질 수 있는 곳<br />
             모든 꿈들이 모여 이야기가 펼쳐지는 곳<br />
             새로운 세계로의 출발
           </p>
-          <p
-            class="wow bounceInUp center"
-            data-wow-duration="1s"
-            data-wow-delay="0.5s"
-          >
+          <p class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s">
             우리는 AVA가 되어 진정한 행복을 찾아 떠납니다.
           </p>
         </div>
@@ -1550,6 +1530,16 @@
     @update:visible="showContentsModal10 = $event"
     :showContentsModal="showContentsModal10"
   />
+  <!-- 캐릭터카드 플라이 -->
+  <CharacterModal7
+    @update:visible="showContentsModal11 = $event"
+    :showContentsModal="showContentsModal11"
+  />
+  <!-- 캐릭터카드 실비아 -->
+  <CharacterModal8
+    @update:visible="showContentsModal12 = $event"
+    :showContentsModal="showContentsModal12"
+  />
   <!-- Comming soon -->
   <ModalCommingSoon
     :imgUrl="imgComming"
@@ -1578,6 +1568,8 @@ import CharacterModal3 from "@/components/region/CharacterModal3";
 import CharacterModal4 from "@/components/region/CharacterModal4";
 import CharacterModal5 from "@/components/region/CharacterModal5";
 import CharacterModal6 from "@/components/region/CharacterModal6";
+import CharacterModal7 from "@/components/region/CharacterModal7";
+import CharacterModal8 from "@/components/region/CharacterModal8";
 import ContentList2 from "@/components/region/ContentList2";
 import ModalMovieChanel3 from "@/components/region/ModalMovieChanel3";
 import ModalAvaDream from "@/components/region/ModalAvaDream";
@@ -1596,6 +1588,8 @@ export default {
     CharacterModal4,
     CharacterModal5,
     CharacterModal6,
+    CharacterModal7,
+    CharacterModal8,
     ContentList,
     ModalMovie,
     ContentsModal,
@@ -1639,6 +1633,8 @@ export default {
       showContentsModal8: false,
       showContentsModal9: false,
       showContentsModal10: false,
+      showContentsModal11: false,
+      showContentsModal12: false,
       showCommingSoon: false,
       imgComming: require("@/assets/image/img_comming.jpg"),
       imgCommingMo: require("@/assets/image/img_comming_mo.jpg"),
@@ -1663,10 +1659,10 @@ export default {
           imgUrl: require("@/assets/image/region1/card_c_6_open.png"),
         },
         {
-          imgUrl: require("@/assets/image/region1/card_c_7.png"),
+          imgUrl: require("@/assets/image/region1/card_c_7_open.png"),
         },
         {
-          imgUrl: require("@/assets/image/region1/card_c_8.png"),
+          imgUrl: require("@/assets/image/region1/card_c_8_open.png"),
         },
         {
           imgUrl: require("@/assets/image/region1/card_c_9.png"),
@@ -1746,6 +1742,10 @@ export default {
         state.showContentsModal9 = true;
       } else if (cardNum === 5) {
         state.showContentsModal10 = true;
+      } else if (cardNum === 6) {
+        state.showContentsModal11 = true;
+      } else if (cardNum === 7) {
+        state.showContentsModal12 = true;
       } else {
         state.showCommingSoon = true;
       }
@@ -1771,7 +1771,7 @@ export default {
   top: -100px;
 }
 @media (max-width: 768px) {
-    :global(.scroll-box > div){
+  :global(.scroll-box > div) {
     top: -200px;
     img {
       height: 700px;
