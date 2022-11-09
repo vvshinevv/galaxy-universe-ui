@@ -171,6 +171,12 @@
 .content-character-box.v8::after {
   background-image: url("@/assets/image/region1/bg_char8.png");
 }
+.content-character-box.v9::after {
+  background-image: url("@/assets/image/region1/bg_char9.png");
+}
+.content-character-box.v10::after {
+  background-image: url("@/assets/image/region1/bg_char10.png");
+}
 .main-character {
   position: relative;
   z-index: 10;
