@@ -1555,6 +1555,26 @@
     @update:visible="showContentsModal14 = $event"
     :showContentsModal="showContentsModal14"
   />
+  <!-- 캐릭터카드 -->
+  <CharacterModal11
+    @update:visible="showContentsModal15 = $event"
+    :showContentsModal="showContentsModal15"
+  />
+  <!-- 캐릭터카드 -->
+  <CharacterModal12
+    @update:visible="showContentsModal16 = $event"
+    :showContentsModal="showContentsModal16"
+  />
+  <!-- 캐릭터카드 -->
+  <CharacterModal13
+    @update:visible="showContentsModal17 = $event"
+    :showContentsModal="showContentsModal17"
+  />
+  <!-- 캐릭터카드 -->
+  <CharacterModal14
+    @update:visible="showContentsModal18 = $event"
+    :showContentsModal="showContentsModal18"
+  />
   <!-- Comming soon -->
   <ModalCommingSoon
     :imgUrl="imgComming"
@@ -1587,6 +1607,10 @@ import CharacterModal7 from "@/components/region/CharacterModal7";
 import CharacterModal8 from "@/components/region/CharacterModal8";
 import CharacterModal9 from "@/components/region/CharacterModal9";
 import CharacterModal10 from "@/components/region/CharacterModal10";
+import CharacterModal11 from "@/components/region/CharacterModal11";
+import CharacterModal12 from "@/components/region/CharacterModal12";
+import CharacterModal13 from "@/components/region/CharacterModal13";
+import CharacterModal14 from "@/components/region/CharacterModal14";
 import ContentList2 from "@/components/region/ContentList2";
 import ModalMovieChanel3 from "@/components/region/ModalMovieChanel3";
 import ModalAvaDream from "@/components/region/ModalAvaDream";
@@ -1609,6 +1633,10 @@ export default {
     CharacterModal8,
     CharacterModal9,
     CharacterModal10,
+    CharacterModal11,
+    CharacterModal12,
+    CharacterModal13,
+    CharacterModal14,
     ContentList,
     ModalMovie,
     ContentsModal,
@@ -1656,6 +1684,10 @@ export default {
       showContentsModal12: false,
       showContentsModal13: false,
       showContentsModal14: false,
+      showContentsModal15: false,
+      showContentsModal16: false,
+      showContentsModal17: false,
+      showContentsModal18: false,
       showCommingSoon: false,
       imgComming: require("@/assets/image/img_comming.jpg"),
       imgCommingMo: require("@/assets/image/img_comming_mo.jpg"),
@@ -1692,16 +1724,16 @@ export default {
           imgUrl: require("@/assets/image/region1/card_c_10_open.png"),
         },
         {
-          imgUrl: require("@/assets/image/region1/card_c_11.png"),
+          imgUrl: require("@/assets/image/region1/card_c_11_open.png"),
         },
         {
-          imgUrl: require("@/assets/image/region1/card_c_12.png"),
+          imgUrl: require("@/assets/image/region1/card_c_12_open.png"),
         },
         {
-          imgUrl: require("@/assets/image/region1/card_c_13.png"),
+          imgUrl: require("@/assets/image/region1/card_c_13_open.png"),
         },
         {
-          imgUrl: require("@/assets/image/region1/card_c_14.png"),
+          imgUrl: require("@/assets/image/region1/card_c_14_open.png"),
         },
         {
           imgUrl: require("@/assets/image/region1/card_c_15.png"),
@@ -1771,6 +1803,14 @@ export default {
         state.showContentsModal13 = true;
       } else if (cardNum === 9) {
         state.showContentsModal14 = true;
+      } else if (cardNum === 10) {
+        state.showContentsModal15 = true;
+      } else if (cardNum === 11) {
+        state.showContentsModal16 = true;
+      } else if (cardNum === 12) {
+        state.showContentsModal17 = true;
+      } else if (cardNum === 13) {
+        state.showContentsModal18 = true;
       } else {
         state.showCommingSoon = true;
       }
