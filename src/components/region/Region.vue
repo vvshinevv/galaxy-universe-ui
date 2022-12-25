@@ -1595,6 +1595,36 @@
     @update:visible="showContentsModal22 = $event"
     :showContentsModal="showContentsModal22"
   />
+  <!-- 캐릭터카드 -->
+  <CharacterModal19
+    @update:visible="showContentsModal23 = $event"
+    :showContentsModal="showContentsModal23"
+  />
+  <!-- 캐릭터카드 -->
+  <CharacterModal20
+    @update:visible="showContentsModal24 = $event"
+    :showContentsModal="showContentsModal24"
+  />
+  <!-- 캐릭터카드 -->
+  <CharacterModal21
+    @update:visible="showContentsModal26 = $event"
+    :showContentsModal="showContentsModal26"
+  />
+  <!-- 캐릭터카드 -->
+  <CharacterModal22
+    @update:visible="showContentsModal25 = $event"
+    :showContentsModal="showContentsModal25"
+  />
+  <!-- 캐릭터카드 -->
+  <CharacterModal23
+    @update:visible="showContentsModal27 = $event"
+    :showContentsModal="showContentsModal27"
+  />
+  <!-- 캐릭터카드 -->
+  <CharacterModal24
+    @update:visible="showContentsModal28 = $event"
+    :showContentsModal="showContentsModal28"
+  />
   <!-- Comming soon -->
   <ModalCommingSoon
     :imgUrl="imgComming"
@@ -1635,6 +1665,12 @@ import CharacterModal15 from "@/components/region/CharacterModal15";
 import CharacterModal16 from "@/components/region/CharacterModal16";
 import CharacterModal17 from "@/components/region/CharacterModal17";
 import CharacterModal18 from "@/components/region/CharacterModal18";
+import CharacterModal19 from "@/components/region/CharacterModal19";
+import CharacterModal20 from "@/components/region/CharacterModal20";
+import CharacterModal21 from "@/components/region/CharacterModal21";
+import CharacterModal22 from "@/components/region/CharacterModal22";
+import CharacterModal23 from "@/components/region/CharacterModal23";
+import CharacterModal24 from "@/components/region/CharacterModal24";
 import ContentList2 from "@/components/region/ContentList2";
 import ModalMovieChanel3 from "@/components/region/ModalMovieChanel3";
 import ModalAvaDream from "@/components/region/ModalAvaDream";
@@ -1665,6 +1701,12 @@ export default {
     CharacterModal16,
     CharacterModal17,
     CharacterModal18,
+    CharacterModal19,
+    CharacterModal20,
+    CharacterModal21,
+    CharacterModal22,
+    CharacterModal23,
+    CharacterModal24,
     ContentList,
     ModalMovie,
     ContentsModal,
@@ -1720,6 +1762,12 @@ export default {
       showContentsModal20: false,
       showContentsModal21: false,
       showContentsModal22: false,
+      showContentsModal23: false,
+      showContentsModal24: false,
+      showContentsModal25: false,
+      showContentsModal26: false,
+      showContentsModal27: false,
+      showContentsModal28: false,
       showCommingSoon: false,
       imgComming: require("@/assets/image/img_comming.jpg"),
       imgCommingMo: require("@/assets/image/img_comming_mo.jpg"),
@@ -1851,6 +1899,18 @@ export default {
         state.showContentsModal21 = true;
       } else if (cardNum === 17) {
         state.showContentsModal22 = true;
+      } else if (cardNum === 18) {
+        state.showContentsModal23 = true;
+      } else if (cardNum === 19) {
+        state.showContentsModal24 = true;
+      } else if (cardNum === 20) {
+        state.showContentsModal25 = true;
+      } else if (cardNum === 21) {
+        state.showContentsModal26 = true;
+      } else if (cardNum === 22) {
+        state.showContentsModal27 = true;
+      } else if (cardNum === 23) {
+        state.showContentsModal28 = true;
       } else {
         state.showCommingSoon = true;
       }
