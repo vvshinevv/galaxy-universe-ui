@@ -1,6 +1,6 @@
 <template>
-  <header class="galaxy-header">
-    <router-link class="galaxy-header-logo" to="/">
+  <!-- <header class="galaxy-header"> -->
+    <!-- <router-link class="galaxy-header-logo" to="/"> -->
 <!--      <svg-->
 <!--        xmlns="http://www.w3.org/2000/svg"-->
 <!--        width="119.717"-->
@@ -36,7 +36,7 @@
 <!--        </g>-->
 <!--      </svg>-->
       <!-- <img :src="logoUrl" alt="mirinae"> -->
-    </router-link>
+    <!-- </router-link> -->
     <!-- <ul class="galaxy-header-list"> -->
       <!-- 첫페이지 진입시 on클래스를 넣어 해당 영역 활성화 되게 수정 -->
       <!-- <li class="galaxy-header-item">
@@ -49,8 +49,8 @@
          <router-link to="/avadream">꿈의세계</router-link>
       </li>
     </ul> -->
-    <MenuLayer />
-  </header>
+    <!-- <MenuLayer /> -->
+  <!-- </header> -->
 </template>
 
 <script>
