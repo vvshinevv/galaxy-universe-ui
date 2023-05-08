@@ -1,15 +1,15 @@
 <template>
   <div class="region-wrap bg-region1">
     <div class="region-main region1">
-      <h1
+      <!-- <h1
         class="region-main-title wow fadeInUp"
         data-wow-duration="1s"
         data-wow-delay="0.5s"
       >
         아바드림
-      </h1>
+      </h1> -->
     </div>
-    <div class="region-bg-box bg-region1">
+    <!-- <div class="region-bg-box bg-region1">
       <div class="region-title-box">
         <p class="text">
           희망이란, 꿈이 이루어질 것이라는 것을<br />
@@ -156,13 +156,13 @@
         <scroll-parallax :speed="0.3">
           <img class="img__background" :src="bgSpace" />
         </scroll-parallax>
-      </div>
+      </div> -->
       <!-- 아바드림 영상 소개 -->
-      <div class="region-main-video">
+      <!-- <div class="region-main-video">
         <div class="region-video r1" @click="clickImage"></div>
-      </div>
+      </div> -->
       <!-- 아바드림 호 소개 -->
-      <div class="region-intro">
+      <!-- <div class="region-intro">
         <div>
           <h3 class="title">
             <svg
@@ -554,9 +554,9 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
       <!-- 아바드림 웹소설 -->
-      <section
+      <!-- <section
         class="region-content-more wow fadeInUp"
         data-wow-duration="1s"
         data-wow-delay="0.5s"
@@ -722,9 +722,9 @@
             <div class="image toon1"></div>
           </li>
         </ul>
-      </section>
+      </section> -->
       <!-- 아바드림 공식 영상 채널 -->
-      <section
+      <!-- <section
         class="region-content wow fadeInUp"
         data-wow-duration="1s"
         data-wow-delay="0.5s"
@@ -890,9 +890,9 @@
           href="https://www.youtube.com/channel/UCBAVpZBPkNCTALZ9KPE4hWg/featured"
           target="_blank"
         ></a>
-      </section>
+      </section> -->
       <!-- 아바드림 아바툰 -->
-      <section
+      <!-- <section
         class="region-content wow fadeInUp"
         data-wow-duration="1s"
         data-wow-delay="0.5s"
@@ -1066,9 +1066,9 @@
           class="region-content-image r1_2"
           @click="showContentsModal3 = true"
         ></div>
-      </section>
+      </section> -->
       <!-- 아바트리뷰트 -->
-      <section
+      <!-- <section
         class="region-content wow fadeInUp"
         data-wow-duration="1s"
         data-wow-delay="0.5s"
@@ -1236,9 +1236,9 @@
           class="region-content-image r1_3"
           @click="showCommingSoon = true"
         ></div>
-      </section>
+      </section> -->
       <!-- 아바드림 캐릭터 -->
-      <section class="region-character" id="regionCharacter">
+      <!-- <section class="region-character" id="regionCharacter">
         <h3 class="region-character-title">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -1464,22 +1464,22 @@
         <div class="icon-bar"></div>
         <Footer />
       </section>
-    </div>
+    </div> -->
   </div>
 
   <!-- 이미지 노출 ComminSoon -->
-  <ModalImage
+  <!-- <ModalImage
     v-model:visible="showModal"
     :imgUrl="imgUrl"
     :imgUrlTitle="imgUrlTitle"
-  />
+  /> -->
   <!-- 아바드림호 보러가기 노출 -->
-  <ModalAvaDream
+  <!-- <ModalAvaDream
     v-if="showModal4"
     v-model:visible="showModal4"
     :imgUrl="imgUrl2"
     :imgUrlTitle="imgUrlTitle2"
-  />
+  /> -->
   <!-- 웹툰 -->
   <!--    <ContentsToonModal-->
   <!--      :showContentsModal="showToon"-->
@@ -1488,154 +1488,154 @@
   <!--    />-->
 
   <!-- 아바드림 웹소설 -->
-  <ContentsModal
+  <!-- <ContentsModal
     :showContentsModal="showBook"
     :title="'드림캐처 1화'"
     v-model:visible="showBook"
-  />
+  /> -->
   <!--아바드림호보기 -->
-  <ModalMovieChanel3
+  <!-- <ModalMovieChanel3
     :showContentsModal="showModal2"
     v-model:visible="showModal2"
   />
-  <ModalMovie :showContentsModal="showModal3" v-model:visible="showModal3" />
+  <ModalMovie :showContentsModal="showModal3" v-model:visible="showModal3" /> -->
   <!-- 아바툰 -->
-  <ContentList
+  <!-- <ContentList
     @update:visible="showContentsModal3 = $event"
     :showContentsModal="showContentsModal3"
-  />
+  /> -->
 
   <!-- 캐릭터카드 기록희 -->
-  <CharacterModal1
+  <!-- <CharacterModal1
     @update:visible="showContentsModal4 = $event"
     :showContentsModal="showContentsModal4"
-  />
+  /> -->
   <!-- 캐릭터카드 음악깡패 -->
-  <CharacterModal2
+  <!-- <CharacterModal2
     @update:visible="showContentsModal5 = $event"
     :showContentsModal="showContentsModal5"
-  />
+  /> -->
   <!-- 캐릭터카드 삐뚜루빼뚜루 -->
-  <CharacterModal3
+  <!-- <CharacterModal3
     @update:visible="showContentsModal6 = $event"
     :showContentsModal="showContentsModal6"
-  />
+  /> -->
   <!-- 캐릭터카드 커엽이 -->
-  <CharacterModal4
+  <!-- <CharacterModal4
     @update:visible="showContentsModal8 = $event"
     :showContentsModal="showContentsModal8"
-  />
+  /> -->
   <!-- 캐릭터카드 반이바니 -->
-  <CharacterModal5
+  <!-- <CharacterModal5
     @update:visible="showContentsModal9 = $event"
     :showContentsModal="showContentsModal9"
-  />
+  /> -->
   <!-- 캐릭터카드 마리앙 -->
-  <CharacterModal6
+  <!-- <CharacterModal6
     @update:visible="showContentsModal10 = $event"
     :showContentsModal="showContentsModal10"
-  />
+  /> -->
   <!-- 캐릭터카드 플라이 -->
-  <CharacterModal7
+  <!-- <CharacterModal7
     @update:visible="showContentsModal11 = $event"
     :showContentsModal="showContentsModal11"
-  />
+  /> -->
   <!-- 캐릭터카드 실비아 -->
-  <CharacterModal8
+  <!-- <CharacterModal8
     @update:visible="showContentsModal12 = $event"
     :showContentsModal="showContentsModal12"
-  />
+  /> -->
   <!-- 캐릭터카드 마도로스 -->
-  <CharacterModal9
+  <!-- <CharacterModal9
     @update:visible="showContentsModal13 = $event"
     :showContentsModal="showContentsModal13"
-  />
+  /> -->
   <!-- 캐릭터카드 젤리곰-->
-  <CharacterModal10
+  <!-- <CharacterModal10
     @update:visible="showContentsModal14 = $event"
     :showContentsModal="showContentsModal14"
-  />
+  /> -->
   <!-- 캐릭터카드 -->
-  <CharacterModal11
+  <!-- <CharacterModal11
     @update:visible="showContentsModal15 = $event"
     :showContentsModal="showContentsModal15"
-  />
+  /> -->
   <!-- 캐릭터카드 -->
-  <CharacterModal12
+  <!-- <CharacterModal12
     @update:visible="showContentsModal16 = $event"
     :showContentsModal="showContentsModal16"
-  />
+  /> -->
   <!-- 캐릭터카드 -->
-  <CharacterModal13
+  <!-- <CharacterModal13
     @update:visible="showContentsModal17 = $event"
     :showContentsModal="showContentsModal17"
-  />
+  /> -->
   <!-- 캐릭터카드 -->
-  <CharacterModal14
+  <!-- <CharacterModal14
     @update:visible="showContentsModal18 = $event"
     :showContentsModal="showContentsModal18"
-  />
+  /> -->
   <!-- 캐릭터카드 -->
-  <CharacterModal15
+  <!-- <CharacterModal15
     @update:visible="showContentsModal19 = $event"
     :showContentsModal="showContentsModal19"
-  />
+  /> -->
   <!-- 캐릭터카드 -->
-  <CharacterModal16
+  <!-- <CharacterModal16
     @update:visible="showContentsModal20 = $event"
     :showContentsModal="showContentsModal20"
-  />
+  /> -->
   <!-- 캐릭터카드 -->
-  <CharacterModal17
+  <!-- <CharacterModal17
     @update:visible="showContentsModal21 = $event"
     :showContentsModal="showContentsModal21"
-  />
+  /> -->
   <!-- 캐릭터카드 -->
-  <CharacterModal18
+  <!-- <CharacterModal18
     @update:visible="showContentsModal22 = $event"
     :showContentsModal="showContentsModal22"
-  />
+  /> -->
   <!-- 캐릭터카드 -->
-  <CharacterModal19
+  <!-- <CharacterModal19
     @update:visible="showContentsModal23 = $event"
     :showContentsModal="showContentsModal23"
-  />
+  /> -->
   <!-- 캐릭터카드 -->
-  <CharacterModal20
+  <!-- <CharacterModal20
     @update:visible="showContentsModal24 = $event"
     :showContentsModal="showContentsModal24"
-  />
+  /> -->
   <!-- 캐릭터카드 -->
-  <CharacterModal21
+  <!-- <CharacterModal21
     @update:visible="showContentsModal26 = $event"
     :showContentsModal="showContentsModal26"
-  />
+  /> -->
   <!-- 캐릭터카드 -->
-  <CharacterModal22
+  <!-- <CharacterModal22
     @update:visible="showContentsModal25 = $event"
     :showContentsModal="showContentsModal25"
-  />
+  /> -->
   <!-- 캐릭터카드 -->
-  <CharacterModal23
+  <!-- <CharacterModal23
     @update:visible="showContentsModal27 = $event"
     :showContentsModal="showContentsModal27"
-  />
+  /> -->
   <!-- 캐릭터카드 -->
-  <CharacterModal24
+  <!-- <CharacterModal24
     @update:visible="showContentsModal28 = $event"
     :showContentsModal="showContentsModal28"
-  />
+  /> -->
   <!-- Comming soon -->
-  <ModalCommingSoon
+  <!-- <ModalCommingSoon
     :imgUrl="imgComming"
     :imgUrlMo="imgCommingMo"
     v-model:visible="showCommingSoon"
-  />
+  /> -->
   <!-- 아바트리뷰트-->
-  <ContentList2
+  <!-- <ContentList2
     @update:visible="showContentsModal7 = $event"
     :showContentsModal="showContentsModal7"
-  />
+  /> -->
 </template>
 
 <script>
